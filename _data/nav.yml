@@ -1,0 +1,12 @@
+- name: Home
+  link: /
+- name: About
+  link: /about
+- name: Take Action
+  link: /action
+- name: Sign Up
+  link: /signup
+- name: Events
+  link: /events
+- name: Press
+  link: /press

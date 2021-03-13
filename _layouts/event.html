@@ -1,0 +1,21 @@
+---
+layout: page
+---
+<section class="title">
+  <h1>{{ page.event.summary }}</h1>
+  <h2>{{ page.event.start.dateTime | date:"%A %d %B" }}</h2>
+  <p>
+    <time>{{ page.event.start.dateTime | date:"%H:%M %P" }}</time>
+    to
+    <time>{{ page.event.end.dateTime |  date:"%H:%M %P (UTC%Z)"}}</time>
+  </p>
+</section>
+<section class="event-links">
+  <p><a href="{{ page.event.htmlLink}}">View event on Google Calendar</a></p>
+  <p><a href="https://calendar.google.com/calendar/ical/{{ page.calendar_id | url_encode }}/public/basic.ics">
+    Add all events to calendar
+  </a></p>
+</section>
+<section>
+  <p>{{ page.event.description }}</p>
+</section>

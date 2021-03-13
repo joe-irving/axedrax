@@ -1,0 +1,24 @@
+---
+layout: page
+title: Take Action
+---
+<h1>Take action</h1>
+
+<p>
+  The following list is compiled of various suggestions and previously
+  planned actions, so hopefully it is relevant.
+</p>
+
+{% for action in site.action %}
+  <a class ="card" href="{{ action.url }}">
+    <section class="card {{ action.flavour }}">
+      <div class="flavour {{ action.flavour }}">
+        <p>{{ action.flavour | capitalize}}</p>
+      </div>
+      <div class="">
+        <h2>{{ action.title }}</h2>
+        <p>{{ action.summary }}</p>
+      </div>
+    </section>
+  </a>
+{% endfor %}

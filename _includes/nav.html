@@ -1,0 +1,28 @@
+<nav>
+  <div id="menu-list-parent">
+    <ul class = 'menu' id="menu-list">
+      <a class ="burger open" id="burger-open" href="#menu-list">
+        <svg width=20px height=20px viewport="0 0 20 20">
+          <g>
+            <line x1="2" x2="18" y1="2" y2="2"/>
+            <line x1="2" x2="18" y1="10" y2="10"/>
+            <line x1="2" x2="18" y1="18" y2="18"/>
+          </g>
+        </svg>
+      </a>
+      <a class ="burger close" id="burger-close" href="#menu-list-parent">
+        <svg width=20px height = 20px viewport="0 0 20 20">
+          <g>
+            <line x1="2" x2="18" y1="2" y2="18"/>
+            <line x1="2" x2="18" y1="18" y2="2"/>
+          </g>
+        </svg>
+      </a>
+    {% for item in site.data.nav %}
+      <li><a href="{{ item.link }}" {% if page.url == item.link %} class="current-page" {% endif %}>
+        {{ item.name }}
+      </a></li>
+    {% endfor %}
+  </ul>
+  </div>
+</nav>

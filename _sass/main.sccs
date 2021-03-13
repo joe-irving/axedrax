@@ -1,0 +1,500 @@
+@font-face{
+  font-family:Fucxed-Caps;
+  src:url("../fonts/FUCXEDCAPS.otf");
+}
+*{
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: rgb(220,79,0);
+  --fg-color: rgba(255,255,255,0.7);
+  --min-menu-size: 300px; /* currently relies on manual input */
+  --transition: 0.3s;
+}
+
+
+html{
+  background-color: var(--bg-color);
+  margin: 0;
+  padding:0;
+}
+
+body{
+  width:100%;
+  margin: 0;
+  padding:0;
+  --nav-height: 5em;
+  --max-width:22cm;
+}
+header{
+  align-items: center;
+  text-align: center;
+}
+header h1 {
+  margin: 0.3cm;
+  font-size: min(18vw,72px);
+}
+/* Navigation menu */
+.burger svg{
+  width: 40px;
+  height:40px;
+}
+.burger svg line{
+  stroke: black;
+  stroke-width: 2px;
+  stroke-linecap:round;
+}
+nav{
+  width: 100%;
+  top:0;
+  z-index: 100;
+}
+ul.menu > li > a{
+  font-family: Fucxed-Caps;
+}
+/* For most phones */
+@media only screen and (max-width: 500px){
+  nav{
+    position: fixed;
+    top:0;
+    text-align: right;
+    padding-right: 0;
+    margin: 0;
+  }
+  nav > *:not(#menu-list-parent){
+    display: none;
+  }
+  a.burger{
+    border:0;
+  }
+  /* mobile menu opening and closing */
+  .burger.open{
+    display: block;
+  }
+  .burger.close{
+    display: none;
+  }
+  ul.menu{
+    padding: 5vw;
+    margin:0;
+  }
+  ul.menu li{
+    display: none;
+  }
+  ul.menu > li{
+    padding: 1vh 0;
+    border-top:1px dashed black;
+  }
+  ul.menu > li > a{
+    font-family: Fucxed-Caps;
+  }
+  #menu-list:target{
+    background-color: var(--bg-color);
+  }
+  #menu-list:target li{
+    display: block;
+  }
+  #menu-list:target .burger.open{
+    display: none;
+  }
+  #menu-list:target .burger.close{
+    display: block;
+  }
+  #menu-list-parent:target > ul.menu li{
+    display: none;
+  }
+  #menu-list-parent:target > ul.menu .burger.open{
+    display: block;
+  }
+  #menu-list-parent:target .burger.close{
+    display: none;
+  }
+}
+/* Desktop and bigger */
+@media only screen and (min-width: 500px){
+  .burger{
+    display:none;
+  }
+  nav{
+    /*When this outputs -ve it defaults to 0 */
+    /* padding: 0 calc(calc(100% - var(--max-width)) / 2); */
+    position: sticky;
+    height:100%;
+    border:0;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+
+  ul.menu{
+    vertical-align:bottom;
+    border:0;
+    margin-left: 1em;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .menu a{
+    padding: 0.4em 0.6em;
+  }
+  .menu, .menu ul
+  {
+  	list-style: none;
+  	padding: 0 10px;
+    display: inline-block;
+  }
+  .menu li
+  {
+    vertical-align:bottom;
+  	float: left;
+  	margin-right: 3px;
+  	position: relative;
+    border: 0;
+    /* height: 100%; */
+  }
+  .menu > li{
+    /* border-top-left-radius: 1em;
+    border-top-right-radius: 1em; */
+  }
+  .menu ul
+  {
+  	position: absolute;
+    right: 0;
+    left: min(-8vw, -100px;);
+  	min-width: 100%;
+  	padding: 0;
+  	display: none;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    opacity: 0;
+    transition: var(--transition);
+  }
+  .menu ul li:last-child{
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+  }
+  .menu ul:hover{
+    box-shadow: 2px 2px 1px 1px var(--bg-color);
+    transition-duration: var(--transition);
+  }
+  .menu ul li
+  {
+  	float: none;
+  	margin: 0;
+  	padding: 0;
+  }
+  .menu a{
+    vertical-align: bottom;
+    border:0;
+    height: 100%;
+  }
+  .menu a:link:not(.burger), .menu a:visited:not(.burger)
+  {
+  	display: block;
+  	font-weight: bold;
+  	text-align: left;
+  	text-decoration: none;
+  }
+  .menu li:hover
+  {
+  	background-color: var(--fg-color);
+    transition-duration: var(--transition);
+  }
+  .menu li:hover ul
+  {
+  	display: block;
+    opacity: 1;
+    background-color: var(--bg-color);
+  }
+}
+/* Main section of page */
+
+/* Main container positioning */
+main, div.main.background,article{
+  width: 100%;
+}
+div.main.background{
+  background-image: url("/images/axedraxlogo_notext_onetree.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+main{
+  background: var(--fg-color);
+}
+article{
+  padding: 1em;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  overflow: hidden;
+}
+/* Article formatting */
+input[type="submit"], button{
+  background-color: var(--bg-color);
+  border: 0;
+  border-radius: 5px;
+  padding: 0.3cm 0.7cm;
+  color: #fff;
+  font-family: Fucxed-Caps;
+  transition: var(--transition)
+}
+input[type="submit"]:hover,button:hover{
+  filter: invert(100%);
+}
+a.button{
+  border:0;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: Fucxed-Caps;
+  margin-top: 0.1em;
+  margin-bottom: 0.2em;
+}
+
+body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(button):not(code){
+  font-family:'Crimson Text', serif;
+}
+article > h1:first-child{
+  text-align: center;
+}
+h1{
+  font-size: min(50px,14vw);
+}
+h2{
+  font-size: min(35px,12vw);
+}
+h3{
+  font-size: min(30px,11vw);
+}
+h4{
+  font-size: min(28px,11vw);
+}
+h5{
+  font-size: min(23px,9vw);
+}
+h6{
+  font-size: min(20px,9vw);
+}
+p,li{
+  font-size: 20px;
+}
+blockquote{
+  border-left: 1px solid black;
+  padding-left: 1em;
+  margin-left: 1em;
+}
+cite::before{
+  content:'- ';
+}
+code{
+  background:white;
+  font-family: 'Courier New', monospace;
+  padding:2px;
+}
+
+.title{
+  text-align: center;
+}
+/* Home page */
+main.home{
+  height: 100%;
+}
+section.full{
+  height:100vh;
+}
+.home section.full.title{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+section.halfimg{
+  display: flex;
+  border-bottom-width:0;
+}
+section.halfimg:nth-child(odd){
+  flex-direction: row-reverse;
+}
+section.halfimg:nth-child(odd) > div:nth-child(2){
+  text-align: right;
+}
+.home section:nth-child(2) > div:first-child{
+  flex:1;
+  background: url("/images/etd-rochdale-smithy-bridge.jpg") no-repeat center center;
+  background-size: auto 100% ;
+}
+.home section.halfimg:nth-child(3) > div:first-child{
+  flex:1;
+  background: url("/images/axe.jpeg") no-repeat center center;
+  background-size: auto 100%;
+  width:50%;
+}
+section.halfimg > div:nth-child(2){
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2vw;
+}
+.home section:first-child{
+  background: url("/images/etd_drax.jpg") no-repeat bottom center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.home section:first-child h1{
+  color: var(--bg-color);
+  font-size: min(22vw,167px);
+}
+/* Inputs */
+form{
+  display: flex;
+  flex-direction: column;
+}
+.newcontent{
+  height: 60vh;
+}
+textarea{
+  width: 100%;
+  flex-grow: 2
+}
+.error{
+  color:red;
+}
+
+/* Event box formatting */
+a.event:hover{
+  color: inherit;
+}
+section.event{
+  display: flex;
+  justify-content:space-between;
+  margin-top: 1vh;
+  padding-left: 1vw;
+  transition: var(--transition);
+  border-radius: 7px;
+}
+section.event:hover{
+  /* box-shadow: 0 0 6px 2px #000; */
+
+  background-color: var(--fg-color);
+}
+section.event .date{
+  flex-grow: 1;
+  margin-right: 10px;
+  text-align: center;
+}
+section.event .date time.day{
+  font-size: min(60px,10vw);
+}
+section.event .date time.month{
+  font-size: min(25px,7vw);
+}
+section.event .info{
+  flex-grow: 2;
+
+}
+section.event h1{
+  font-size: min(30px,11vw);
+}
+
+section.event-links{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section:not(:last-child):not(.full){
+  border-bottom: 1px solid var(--bg-color);
+}
+a {
+  color: black;
+  text-decoration: none;
+  transition: 0.2s linear;
+  border-bottom: 1px solid black;
+}
+
+a:hover {
+  border-color: var(--bg-color);
+  color: var(--bg-color);
+}
+
+nav > a, footer a {
+  border-bottom: 0;
+}
+nav > a:hover, footer a:hover {
+  color:inherit;
+}
+
+/* Footer */
+
+footer{
+  margin:1em;
+}
+
+img.icon{
+  transition: 300ms;
+  height: 36px;
+  /* -webkit-filter: grayscale(100%); */
+  /* filter: grayscale(100%); */
+  opacity: 0.5;
+  padding: 0 0.5cm ;
+}
+img.icon:hover{
+  /* -webkit-filter: grayscale(0);
+  filter: grayscale(0); */
+  opacity: 1;
+}
+div.social{
+  text-align: center;
+}
+
+
+
+
+/* Formatting the action network signup */
+/* #can_embed_form_inner :not(form){
+  display:none;
+} */
+/* #can-form-area-axedrax{
+  width: 75%;
+  margin: 0 auto;
+}
+#logo_wrap,#action_info,.can_thank_you-block, #can_thank_you, #can_embed_form_inner > h2,h4 ,img.ajax-loading {
+  display: none;
+}
+form {
+}
+#can_embed_form_inner form li {
+  list-style: none;
+}
+#can_embed_form_inner .country_drop_wrap{
+  /* The drop down list */
+/* }
+.checkbox_group_wrap{
+  display: block;
+}
+span.check_radio_field label{
+  display:block;
+}
+.control-group > *, .floatlabel-wrapper > *{
+  display:block;
+  padding: 0.1cm;
+}
+.control-group, .floatlabel-wrapper {
+  /* text-align: center; */
+  /* align-items: center;
+}
+.can_embed{
+  margin
+}
+.control-group{
+  padding: 0.1cm
+}
+textarea{
+  width: 100%;
+}
+#form_col2{
+  text-align: center;
+
+} */

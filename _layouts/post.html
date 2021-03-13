@@ -1,0 +1,14 @@
+---
+layout: page
+---
+<section class="title">
+  <h1>{{ page.title }}</h1>
+  <p>
+    <strong>
+      {{ page.excerpt }}
+    </strong>
+  </p>
+  <p><em>{{ page.date | date_to_string }}</em></p>
+</section>
+
+{{ content }}

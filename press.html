@@ -1,0 +1,26 @@
+---
+layout: page
+title: Press
+permalink: /press/
+---
+<section class="title">
+  <h1>Press</h1>
+</section>
+<section>
+  <p>Contact email for press enquiries: <a href="mailto:media.axedrax@pm.me">media.axedrax@pm.me</a>.</p>
+</section>
+<h2>Recent press releases</h2>
+<br>
+{% for post in site.posts %}
+  <a href="{{ post.url }}" class="card">
+    <section class="card">
+      <div class="date">
+        <time><p>{{ post.date | date_to_string }}</p></time>
+      </div>
+      <div class="info">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.excerpt }}</p>
+      </div>
+    </section>
+  </a>
+{% endfor %}
