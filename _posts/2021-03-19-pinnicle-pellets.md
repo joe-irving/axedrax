@@ -5,10 +5,8 @@ excerpt: >-
   On 31st March, Drax shareholders will vote on acquiring the wood pellet
   production company Pinnacle Pellets. This will mean ancient forests burned
   in UK power station.
-image:
-  path: /assets/images/viewsfromabove.jpeg
-  height: 580
-  width: 700
+image: /assets/images/viewsfromabove.jpeg
+
 ---
 
 Drax Plc plan to buy further into the wood burning industry, by purchasing
