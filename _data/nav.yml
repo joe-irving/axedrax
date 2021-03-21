@@ -6,7 +6,7 @@
   link: /action
 - name: Sign Up
   link: /signup
-- name: Events
-  link: /events
+# - name: Events
+#   link: /events
 - name: Press
   link: /press

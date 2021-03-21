@@ -421,6 +421,7 @@ section.card .date{
 }
 section.card .date time.day{
   font-size: min(60px,10vw);
+  border-bottom: 5px solid var(--accent-color);
 }
 section.card .date time.month{
   font-size: min(25px,7vw);
@@ -451,6 +452,7 @@ a {
 
 a:hover {
   border-color: var(--bg-color);
+  border-bottom-width: 5px;
   color: var(--bg-color);
 }
 

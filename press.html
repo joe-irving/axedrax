@@ -15,7 +15,9 @@ permalink: /press/
   <a href="{{ post.url }}" class="card">
     <section class="card">
       <div class="date">
-        <time><p>{{ post.date | date_to_string }}</p></time>
+        <time class="day">{{ post.date | date:"%d" }}</time>
+        <br>
+        <time class="month">{{ post.date | date:"%b" }}</time>
       </div>
       <div class="info">
         <h2>{{ post.title }}</h2>
