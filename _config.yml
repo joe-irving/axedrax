@@ -2,7 +2,7 @@ collections:
   action:
     output: true
 
-permalink: pretty
+permalink: /:categories/:title/
 
 plugins:
   - jekyll-feed
