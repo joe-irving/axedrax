@@ -14,11 +14,29 @@
   --i-bg-b: calc(255 - var(--bg-b));
   --bg-color: rgb(var(--bg-r),var(--bg-g),var(--bg-b));
   --accent-color: rgb(var(--i-bg-r),var(--i-bg-g),var(--i-bg-b));
-  --fg-color: rgba(255,255,255,0.7);
+  --fg-color: rgba(255,255,255,0.9);
   --min-menu-size: 300px; /* currently relies on manual input */
   --transition: 0.3s;
 }
-
+:nth-child(1){--nth:1;}
+:nth-child(2){--nth:2;}
+:nth-child(3){--nth:3;}
+:nth-child(4){--nth:4;}
+:nth-child(5){--nth:5;}
+:nth-child(6){--nth:6;}
+:nth-child(7){--nth:7;}
+:nth-child(8){--nth:8;}
+:nth-child(9){--nth:9;}
+:nth-child(10){--nth:10;}
+:nth-child(11){--nth:11;}
+:nth-child(12){--nth:12;}
+:nth-child(13){--nth:13;}
+:nth-child(14){--nth:14;}
+:nth-child(15){--nth:15;}
+:nth-child(16){--nth:16;}
+:nth-child(17){--nth:7;}
+:nth-child(18){--nth:18;}
+:nth-child(19){--nth:19;}
 
 html{
   background-color: var(--bg-color);
@@ -294,6 +312,7 @@ h6{
 }
 p,li{
   font-size: 20px;
+  line-height: 1.8;
 }
 blockquote{
   border-left: 3px solid var(--bg-color);
@@ -303,17 +322,14 @@ blockquote{
 blockquote > ul:last-child{
     list-style: none;
 }
-blockquote > ul:last-child > li::before{
+cite::before, blockquote > ul:last-child > li::before{
 
   content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: var(--bg-color); /* Change the color */
-  font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: -2em; /* Also needed for space (tweak if needed) */
-}
-cite::before{
-  content:'- ';
+  color: var(--bg-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 2em;
+  margin-left: -1.5em;
 }
 code{
   background:white;
@@ -326,7 +342,7 @@ code{
 }
 /* Home page */
 main.home{
-  height: 100%;
+  /* height: 100%; */
 }
 section.full{
   height:100vh;
@@ -336,32 +352,60 @@ section.full{
   flex-flow: column;
   justify-content: space-around;
 }
-section.halfimg{
-  display: flex;
-  border-bottom-width:0;
+section.halfimg {
+  border-bottom-width: 0;
+  position:relative;
 }
 section.halfimg > div{
-  flex:1;
-}
-section.halfimg > div:first-child{
-  background: url("/assets/images/axedraxlogo_notext_circle.svg") no-repeat center center;
-  background-size: auto 100%;
-  width:50%;
-}
-section.halfimg:nth-child(odd){
-  flex-direction: row-reverse;
-}
-section.halfimg:nth-child(odd) > div:nth-child(2){
-  text-align: right;
-}
-.home section:nth-child(2) > div:first-child{
-  background-image: url("/assets/images/etd-rochdale-smithy-bridge.jpg");
-}
-.home section.halfimg:nth-child(3) > div:first-child{
-  background-image: url("/assets/images/axe.jpeg");
+  /* flex:1; */
+  /* width: 50%; */
+  height: 100%;
+  position: absolute;
+  top:0;
 }
 section.halfimg > div:nth-child(2){
-  flex:1;
+  background: url("/assets/images/axedraxlogo_notext_circle.svg") no-repeat center center;
+  background-size: auto 100%;
+}
+@media only screen and (min-width: 500px){
+  section.halfimg > div{
+    width: 50%;
+  }
+  section.halfimg > div:first-child{
+    width:50%;
+  }
+  section.halfimg:nth-child(odd) > div:nth-child(1){
+    left:50%;
+  }
+  section.halfimg:nth-child(even) > div:nth-child(1){
+    text-align: right;
+  }
+  section.halfimg:nth-child(even) > div:nth-child(2){
+    left:50%;
+  }
+}
+@media only screen and (max-width: 500px){
+  section.halfimg{
+    height: 200vh;
+    position: static;
+  }
+  section.halfimg > div{
+    position: static;
+    width: 100%;
+    height: 100vh;
+    text-align:center;
+  }
+}
+.home section.halfimg:nth-child(2) > div:nth-child(2){
+  background-image: url("/assets/images/etd-rochdale-smithy-bridge.jpg");
+}
+.home section.halfimg:nth-child(4) > div:nth-child(2){
+  background-image: url("/assets/images/axe.jpeg");
+}
+.home section.halfimg:nth-child(3) > div:nth-child(2){
+  background-image: url("/assets/images/viewsfromabove.jpeg");
+}
+section.halfimg > div:first-child{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -373,6 +417,7 @@ section.halfimg > div:nth-child(2){
   -moz-background-size: cover;
   -o-background-size: cover;
 }
+  /* The big home page title */
 .home section:first-child h1{
   color: var(--bg-color);
   font-size: min(22vw,167px);
