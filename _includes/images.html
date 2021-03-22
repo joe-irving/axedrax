@@ -1,0 +1,10 @@
+{% for image in site.static_files %}
+    {% if image.path contains 'assets/images/photos' %}
+      {% assign split_path = image.path | split: "/" %}
+      {% assign parent_index = split_path.size | minus: 2 %}
+      {% assign parent_name = split_path[parent_index] %}
+      <a href="{{ image.path }}" class="image square" download="{{ parent_name }}_{{ image.name }}">
+        <img src="{{ image.path }}" alt="image" />
+      </a>
+    {% endif %}
+{% endfor %}

@@ -1,12 +1,15 @@
 - name: Home
   link: /
 - name: About
-  link: /about
+  link: /about/
+  pages:
+    - name: Drax
+      link: /about/drax/
 - name: Take Action
-  link: /action
+  link: /action/
 - name: Sign Up
-  link: /signup
+  link: /signup/
 # - name: Events
-#   link: /events
+#   link: /events/
 - name: Press
-  link: /press
+  link: /press/

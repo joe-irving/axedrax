@@ -20,8 +20,15 @@
       </a>
     {% for item in site.data.nav %}
       <li><a href="{{ item.link }}" {% if page.url == item.link %} class="current-page" {% endif %}>
-        {{ item.name }}
-      </a></li>
+        {{ item.name }}</a>
+        {% if item.pages %}
+          <ul>
+            {% for p in item.pages %}
+              <li><a href="{{ p.link }}">{{ p.name }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
     {% endfor %}
   </ul>
   </div>

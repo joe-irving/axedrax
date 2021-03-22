@@ -1,6 +1,6 @@
 collections:
   action:
-    output: true
+     output: true
 
 permalink: /:categories/:title/
 
@@ -15,7 +15,13 @@ tagline: The collective that oppose the company Drax.
 description: >-
   The collective that oppose the company Drax. We are direct action
   groups, local campaigns and individuals.
-url: ""
+url: "https://www.axedrax.ga"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/photos/etd_drax.jpg
 
 facebook:
   publisher: https://www.facebook.com/axedraxlovetrees
@@ -28,7 +34,7 @@ social:
     - https://www.facebook.com/axedraxlovetrees
     - https://www.instagram.com/axe_drax/
 locale: en_GB
-image: /assets/images/etd_drax.jpg
+image: /assets/images/photos/etd_drax.jpg
 
 gcalendar:
   key_file: /home/joe/webhooks/google/axe-drax-event-s-1615152052724-b9be4334ea41.json

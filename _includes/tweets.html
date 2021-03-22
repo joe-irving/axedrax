@@ -1,0 +1,19 @@
+{% for tweet in site.data.tweets %}
+  <a class="card" target="_blank" href="https://twitter.com/intent/tweet?text={{ tweet.text | url_encode }}">
+    <section class="card tweet">
+      <p>
+        {% assign words = tweet.text | split: " " %}
+        {% for word in words %}
+          {% assign first_ch =  word |  slice: 0 %}
+          {% if first_ch == "#" %}
+            <span class="hashtag">{{ word }}</span>
+          {% elsif first_ch == "@" %}
+            <span class="at">{{ word }}</span>
+          {% else %}
+            {{ word }}
+          {% endif %}
+        {% endfor %}
+      </p>
+    </section>
+  </a>
+{% endfor %}

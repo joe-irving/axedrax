@@ -1,0 +1,33 @@
+---
+title: Social media
+summary: >-
+  Share and promote discussion around Drax. This is often really useful when
+  in person actions are happening and it gets information out to people.
+flavour: remote
+layout: page
+---
+# Social media
+
+If you have some time and have accounts, then share information to people on
+social media. There are some examples below.
+
+## Images
+
+There should be images in our [photo bank](/images)
+
+# Examples
+
+## Tweets
+
+**_Click on the tweets to share them._**
+
+<section class="tweets">{% include tweets.html %}</section>
+
+## Facebook
+
+Check out one of the images from [our photo bank](/images), take your own,
+or even record a short video. Then make sure to add a caption to educate people!
+
+Here are some example posts:
+
+{% include fb.html %}
