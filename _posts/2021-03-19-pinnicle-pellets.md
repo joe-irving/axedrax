@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Drax Expand Logging into Canadian Woodland for £226m deal
+title: Drax Expand Logging into Canadian Woodland for £436m deal
 excerpt: >-
   On 31st March, Drax shareholders will vote on acquiring the wood pellet
   production company Pinnacle Pellets. This will mean ancient forests burned
