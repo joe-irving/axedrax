@@ -542,6 +542,7 @@ section.event-links{
 }
 
 section:not(:last-child):not(.full):not(.facebook){
+  padding-bottom: 1vw;
   border-bottom: 1px solid var(--bg-color);
 }
 a {

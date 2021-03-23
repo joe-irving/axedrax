@@ -1,8 +1,8 @@
 ---
-title: Social media
+title: Social Media
 summary: >-
-  Share and promote discussion around Drax. This is often really useful when
-  in person actions are happening and it gets information out to people.
+  Share and promote discussion around Drax. Often in conjunction with planned
+  in person action.
 flavour: remote
 layout: page
 ---
