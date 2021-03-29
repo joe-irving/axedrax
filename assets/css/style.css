@@ -334,7 +334,7 @@ p,li{
 }
 p, ul:not(.menu):not(.sub-menu) li, ol > li{
   line-height: 1.8;
-} 
+}
 blockquote{
   border-left: 3px solid var(--bg-color);
   padding-left: 1em;
@@ -344,13 +344,12 @@ blockquote > ul:last-child{
     list-style: none;
 }
 cite::before, blockquote > ul:last-child > li::before{
-
   content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: var(--bg-color);
   font-weight: bold;
   display: inline-block;
-  width: 2em;
-  margin-left: -1.5em;
+  width: 1em;
+  /* margin-left: -0.5em; */
 }
 code{
   background:white;
@@ -461,6 +460,22 @@ textarea{
 }
 .error{
   color:red;
+}
+/* Sign formatting */
+.signs{
+  display: flex;
+  flex-wrap: wrap;
+}
+.sign{
+  font-family: 'Permanent Marker', cursive, sans-serif;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30px;
+  max-width: 200px;
+  margin: max(2vw,15px);
+  padding: 25px;
+  background: linear-gradient(to left top,#AD8762,#D79D65);
+  clip-path: polygon(0 0, 95% 10%, 100% 90%, 0 90%);
 }
 /* Tweet formatting */
 .tweet > p, .tweet > p *{

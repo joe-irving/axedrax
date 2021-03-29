@@ -46,7 +46,6 @@ it.
 
 The future of this country is community based, moving away from a
 privatised and centralised energy system to one that works for everyone.
-Thinking globally, and acting locally.
 
 ---
 
