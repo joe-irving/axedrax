@@ -6,7 +6,6 @@ summary: >-
 flavour: remote
 layout: page
 ---
-# Social media
 
 If you have some time and have accounts, then share information to people on
 social media. There are some examples below.

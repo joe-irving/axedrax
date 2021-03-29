@@ -1,0 +1,16 @@
+
+{% for action in site.posts %}
+{% if action.categories contains "action" %}
+  <a class ="card" href="{{ action.url }}">
+    <section class="card {{ action.flavour }}">
+      <div class="flavour">
+        <p>{{ action.flavour | capitalize}}</p>
+      </div>
+      <div>
+        <h2>{{ action.title }}</h2>
+        <p>{{ action.summary }}</p>
+      </div>
+    </section>
+  </a>
+  {% endif %}
+{% endfor %}

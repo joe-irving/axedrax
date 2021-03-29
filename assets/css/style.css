@@ -332,9 +332,9 @@ p,li{
   font-size: 20px;
 
 }
-p{
+p, ul:not(.menu):not(.sub-menu) li, ol > li{
   line-height: 1.8;
-}
+} 
 blockquote{
   border-left: 3px solid var(--bg-color);
   padding-left: 1em;
@@ -543,6 +543,10 @@ section.event-links{
 
 section:not(:last-child):not(.full):not(.facebook){
   padding-bottom: 1vw;
+  border-bottom: 1px solid var(--bg-color);
+}
+hr{
+  border:0;
   border-bottom: 1px solid var(--bg-color);
 }
 a {

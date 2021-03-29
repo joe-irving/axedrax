@@ -1,6 +1,6 @@
-collections:
-  action:
-     output: true
+# collections:
+#   action:
+#      output: true
 
 permalink: /:categories/:title/
 
