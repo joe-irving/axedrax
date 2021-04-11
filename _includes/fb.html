@@ -1,0 +1,10 @@
+{% for post in site.data.fb %}
+{% if post.text | lstrip != "" %}
+  <section class="facebook">
+    <p>{{ post.text | newline_to_br  }}</p>
+    {% if post.image | lstrip != "" %}
+    <img src="{{ post.image | lstrip }}" alt="Example post image">
+    {% endif %}
+  </section>
+{% endif %}
+{% endfor %}

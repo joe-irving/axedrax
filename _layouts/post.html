@@ -2,13 +2,15 @@
 layout: page
 ---
 <section class="title">
-  <h1>{{ page.title }}</h1>
   <p>
     <strong>
       {{ page.excerpt }}
     </strong>
   </p>
   <p><em>{{ page.date | date_to_string }}</em></p>
+<span class="share">
+  <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"><img class="icon" src="/assets/images/facebook.svg" title="Facebook" alt="Share to Facebook"></a>
+  <a target="_blank" href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}"><img class="icon" src="/assets/images/twitter.svg" title="Twitter" alt="Share on Twitter"></a>
+</span>
 </section>
-
 {{ content }}

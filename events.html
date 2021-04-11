@@ -1,11 +1,7 @@
 ---
 layout: page
-title: Events
+title: Upcoming Events
 ---
-<section class="title">
-  <h1>Upcoming events</h1>
-</section>
-
 {% for event in site.data.calendars["nar47r6qbo04v9j4htgave8nvk@group.calendar.google.com"] %}
 {% assign evnt_start =  event.start.dateTime | date:"%s" | times: 1  %}
 {% assign now_date = "now" | date:"%s" | times: 1 %}

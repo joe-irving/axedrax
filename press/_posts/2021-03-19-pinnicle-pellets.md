@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Drax Expand Logging into Canadian Ancient Woodland
+title: Drax Expand Logging into Canadian Woodland for £436m deal
 excerpt: >-
   On 31st March, Drax shareholders will vote on acquiring the wood pellet
   production company Pinnacle Pellets. This will mean ancient forests burned
   in UK power station.
-image: /assets/images/viewsfromabove.jpeg
+image: /assets/images/photos/viewsfromabove/viewsfromabove.jpeg
 
 ---
 
 Drax Plc plan to buy further into the wood burning industry, by purchasing
 Pinnacle "Renewable Energy". This company log some of the last remaining old
-growth forests in British Columbia, to be burned at Drax Power Station in
+forests in British Columbia, to be burned at Drax Power Station in
 North Yorkshire.
 
 They will be voting on this a the end of March, and remote votes must be in by

@@ -2,23 +2,30 @@
 layout: page
 title: Take Action
 ---
-<h1>Take action</h1>
+<section>
+  <p>
+    The following list is compiled of various suggestions and previously
+    planned actions, so hopefully it is relevant.
+  </p>
+  <p>
+    We will be adding more as people take action - with the hope this will
+    be a useful guide for people to start from.
+  </p>
+</section>
 
-<p>
-  The following list is compiled of various suggestions and previously
-  planned actions, so hopefully it is relevant.
-</p>
-
-{% for action in site.action %}
+<section>
+  {% include actions.html %}
+</section>
+<!-- {% for action in site.action %}
   <a class ="card" href="{{ action.url }}">
     <section class="card {{ action.flavour }}">
-      <div class="flavour {{ action.flavour }}">
+      <div class="flavour">
         <p>{{ action.flavour | capitalize}}</p>
       </div>
-      <div class="">
+      <div>
         <h2>{{ action.title }}</h2>
         <p>{{ action.summary }}</p>
       </div>
     </section>
   </a>
-{% endfor %}
+{% endfor %} -->
