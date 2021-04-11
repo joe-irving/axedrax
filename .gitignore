@@ -1,5 +1,4 @@
 _site
 .jekyll-cache
 vendor
-Gemfile
 Gemfile.lock
