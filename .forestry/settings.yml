@@ -4,6 +4,14 @@ auto_deploy: false
 admin_path: admin
 webhook_url: 
 sections:
+- type: document
+  path: _data/slogans.yml
+  label: Slogans
+  match: "**/*"
+- type: document
+  path: _config.yml
+  label: Config
+  match: "**/*"
 - type: directory
   path: press/_posts
   label: Press
