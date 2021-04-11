@@ -5,6 +5,11 @@ admin_path: admin
 webhook_url: 
 sections:
 - type: directory
+  path: ''
+  label: all
+  create: all
+  match: "**/*"
+- type: directory
   path: press/_posts
   label: Press
   create: documents
