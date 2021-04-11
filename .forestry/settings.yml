@@ -5,6 +5,10 @@ admin_path: admin
 webhook_url: 
 sections:
 - type: document
+  path: _data/tweets.yml
+  label: Tweets
+  match: "**/*"
+- type: document
   path: _data/slogans.yml
   label: Slogans
 - type: document
