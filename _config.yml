@@ -28,6 +28,12 @@ facebook:
 
 logo: /assets/images/axedraxlogo_notext_circle.svg
 
+source: .
+destination: ./docs
+
+exclude:
+  - vendor
+
 social:
   name: Axe Drax
   links:
