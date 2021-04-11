@@ -4,16 +4,9 @@ auto_deploy: false
 admin_path: admin
 webhook_url: 
 sections:
-- type: document
-  path: _data/tweets.yml
-  label: Tweets
-  match: "**/*"
-- type: document
-  path: _data/slogans.yml
-  label: Slogans
-- type: document
-  path: _config.yml
-  label: Config
+- type: jekyll-pages
+  label: Pages
+  create: all
 - type: directory
   path: press/_posts
   label: Press
@@ -31,9 +24,21 @@ sections:
 - type: jekyll-posts
   label: Posts
   create: all
-- type: jekyll-pages
-  label: Pages
-  create: all
+- type: heading
+  label: Data
+- type: document
+  path: _data/tweets.yml
+  label: Tweets
+- type: document
+  path: _data/slogans.yml
+  label: Slogans
+- type: document
+  path: _data/nav.yml
+  label: Nav
+  match: "**/*"
+- type: document
+  path: _config.yml
+  label: Config
 upload_dir: assets/images/photos
 public_path: assets/images/photos
 front_matter_path: ''
