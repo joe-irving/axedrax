@@ -9,11 +9,15 @@ sections:
   label: Press
   create: documents
   match: "**/*"
+  templates:
+  - press
 - type: directory
   path: action/_posts
   label: Actions
   create: documents
   match: "**/*"
+  templates:
+  - action
 - type: jekyll-posts
   label: Posts
   create: all
