@@ -35,7 +35,6 @@ sections:
 - type: document
   path: _data/nav.yml
   label: Nav
-  match: "**/*"
 - type: document
   path: _config.yml
   label: Config
