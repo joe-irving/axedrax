@@ -1,4 +1,17 @@
 ---
 label: Redirect
 hide_body: true
-fields: []
+fields:
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
+  hidden: true
+  default: redirect
+- name: redirect
+  type: text
+  config:
+    required: false
+  label: URL
+  description: The link this page will redirect to
