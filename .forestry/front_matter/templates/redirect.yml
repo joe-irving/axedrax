@@ -15,3 +15,5 @@ fields:
     required: false
   label: URL
   description: The link this page will redirect to
+pages:
+- "./nca.md"
