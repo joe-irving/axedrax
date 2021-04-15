@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Online Action Drax AGM
-excerpt: Biofuelwatch action against Drax on it's AGM date
+excerpt: 'Biofuelwatch action against Drax on it''s AGM: 21st April 2021 11:30am'
 image: assets/images/photos/etd-rochdale-smithy-bridge.jpg
 permalink: agm-2021
 
