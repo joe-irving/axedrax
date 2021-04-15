@@ -2,6 +2,13 @@
 label: Redirect
 hide_body: true
 fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  hidden: true
+  default: Redirecting...
 - name: layout
   type: text
   config:
