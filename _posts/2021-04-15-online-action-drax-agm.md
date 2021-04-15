@@ -3,6 +3,7 @@ layout: post
 title: Online Action Drax AGM
 excerpt: Biofuelwatch action against Drax on it's AGM date
 image: assets/images/photos/etd-rochdale-smithy-bridge.jpg
+permalink: agm-2021
 
 ---
 Take action against Drax in this online action organised by Biofuelwatch!
