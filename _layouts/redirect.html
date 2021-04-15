@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {% include head.html %}
+    <meta http-equiv="refresh" content="0;URL='{{ page.redirect }}'">
+  </head>
+  <body>
+    {% include nav.html %}
+    <main>
+      <article>
+        <p>
+          You are being redirected. If this does not work follow
+          <a href="{{ page.redirect }}">this link</a> below instead.
+        </p>
+        <p>
+          <a href="{{ page.redirect }}">{{ page.redirect }}</a>
+        </p>
+      </article>
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

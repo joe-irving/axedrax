@@ -2,7 +2,7 @@
 permalink: "/:categories/:title/"
 plugins:
 - jekyll-feed
-- jekyll-google-calendar
+# - jekyll-google-calendar
 - jekyll-seo-tag
 - jekyll-sitemap
 title: Axe Drax
@@ -29,11 +29,12 @@ social:
   - https://www.instagram.com/axe_drax/
 locale: en_GB
 image: "/assets/images/photos/etd_drax.jpg"
-gcalendar:
-  key_file: "/home/joe/webhooks/google/axe-drax-event-s-1615152052724-b9be4334ea41.json"
-  calendars:
-  - id: nar47r6qbo04v9j4htgave8nvk@group.calendar.google.com
-    directory: events
-    layout: event
-    date_format: "%d-%m-%Y"
-    look_ahead: "365"
+
+# gcalendar:
+#   key_file: "/home/joe/webhooks/google/axe-drax-event-s-1615152052724-b9be4334ea41.json"
+#   calendars:
+#   - id: nar47r6qbo04v9j4htgave8nvk@group.calendar.google.com
+#     directory: events
+#     layout: event
+#     date_format: "%d-%m-%Y"
+#     look_ahead: "365"
