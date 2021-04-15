@@ -14,5 +14,10 @@ fields:
 - type: file
   name: image
   label: image
+- name: permalink
+  type: text
+  config:
+    required: false
+  label: Link
 pages:
 - "./_posts/online-action-drax-agm.md"
