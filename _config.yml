@@ -1,21 +1,19 @@
-# collections:
-#   action:
-#      output: true
-
-permalink: /:categories/:title/
-
-plugins:
-  - jekyll-feed
-  # - jekyll-google-calendar
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
 title: Axe Drax
 tagline: The collective that oppose the company Drax.
 description: >-
   The collective that oppose the company Drax. We are direct action
   groups, local campaigns and individuals.
 url: "https://www.axedrax.ga"
+
+
+permalink: /:categories/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+
 
 action_network:
   event_campaign: 8e44ce3c-551b-4d14-9192-3a39f9cde323
@@ -52,12 +50,3 @@ social:
     - https://www.instagram.com/axe_drax/
 locale: en_GB
 image: /assets/images/photos/etd_drax.jpg
-
-gcalendar:
-  key_file: /home/joe/webhooks/google/axe-drax-event-s-1615152052724-b9be4334ea41.json
-  calendars:
-    - id: nar47r6qbo04v9j4htgave8nvk@group.calendar.google.com      # eg. blahblahblah12345678912345@group.calendar.google.com
-      directory: events         # the directory in which to place geneated events
-      layout: event          # the Jekyll layout template to use for events
-      date_format: "%d-%m-%Y"   # Uses Strftime formating directive (http://strftime.net/)
-      look_ahead: 365           # 1 year in days
