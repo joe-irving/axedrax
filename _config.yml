@@ -6,7 +6,7 @@ permalink: /:categories/:title/
 
 plugins:
   - jekyll-feed
-  - jekyll-google-calendar
+  # - jekyll-google-calendar
   - jekyll-seo-tag
   - jekyll-sitemap
 
@@ -17,11 +17,22 @@ description: >-
   groups, local campaigns and individuals.
 url: "https://www.axedrax.ga"
 
+action_network:
+  event_campaign: 8e44ce3c-551b-4d14-9192-3a39f9cde323
+
 defaults:
   - scope:
       path: ""
     values:
       image: /assets/images/photos/etd_drax.jpg
+
+collections:
+  events:
+    output: true
+  templates:
+    output: false
+
+future: true
 
 facebook:
   publisher: https://www.facebook.com/axedraxlovetrees

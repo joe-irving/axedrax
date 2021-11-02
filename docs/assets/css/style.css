@@ -1,17 +1,42 @@
 @font-face{
   font-family:Fucxed-Caps;
-  src:url("../fonts/FUCXEDCAPS.otf");
+  src:url("/assets/fonts/FUCXEDCAPS.otf");
 }
 *{
   box-sizing: border-box;
 }
 :root {
-  --bg-color: rgb(220,79,0);
-  --fg-color: rgba(255,255,255,0.7);
+  --bg-r: 220;
+  --bg-g: 79;
+  --bg-b: 0;
+  --i-bg-r: calc(255 - var(--bg-r));
+  --i-bg-g: calc(255 - var(--bg-g));
+  --i-bg-b: calc(255 - var(--bg-b));
+  --bg-color: rgb(var(--bg-r),var(--bg-g),var(--bg-b));
+  --accent-color: rgb(var(--i-bg-r),var(--i-bg-g),var(--i-bg-b));
+  --fg-color: rgba(255,255,255,0.9);
   --min-menu-size: 300px; /* currently relies on manual input */
   --transition: 0.3s;
 }
-
+:nth-child(1){--nth:1;}
+:nth-child(2){--nth:2;}
+:nth-child(3){--nth:3;}
+:nth-child(4){--nth:4;}
+:nth-child(5){--nth:5;}
+:nth-child(6){--nth:6;}
+:nth-child(7){--nth:7;}
+:nth-child(8){--nth:8;}
+:nth-child(9){--nth:9;}
+:nth-child(10){--nth:10;}
+:nth-child(11){--nth:11;}
+:nth-child(12){--nth:12;}
+:nth-child(13){--nth:13;}
+:nth-child(14){--nth:14;}
+:nth-child(15){--nth:15;}
+:nth-child(16){--nth:16;}
+:nth-child(17){--nth:7;}
+:nth-child(18){--nth:18;}
+:nth-child(19){--nth:19;}
 
 html{
   background-color: var(--bg-color);
@@ -25,6 +50,10 @@ body{
   padding:0;
   --nav-height: 5em;
   --max-width:22cm;
+}
+*::selection{
+  color: black;
+  background-color: var(--accent-color);
 }
 header{
   align-items: center;
@@ -48,9 +77,12 @@ nav{
   width: 100%;
   top:0;
   z-index: 100;
+
 }
-ul.menu > li > a{
+ul.menu  a:not(.burger){
   font-family: Fucxed-Caps;
+  color: white;
+  background-color: var(--bg-color)
 }
 /* For most phones */
 @media only screen and (max-width: 500px){
@@ -85,8 +117,13 @@ ul.menu > li > a{
     padding: 1vh 0;
     border-top:1px dashed black;
   }
-  ul.menu > li > a{
-    font-family: Fucxed-Caps;
+  ul.menu > li > ul > li::after{
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    width: 2em;
+    margin-left: -1.5em;
   }
   #menu-list:target{
     background-color: var(--bg-color);
@@ -138,6 +175,7 @@ ul.menu > li > a{
   }
   .menu a{
     padding: 0.4em 0.6em;
+
   }
   .menu, .menu ul
   {
@@ -175,10 +213,10 @@ ul.menu > li > a{
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
   }
-  .menu ul:hover{
+  /* .menu ul:hover{
     box-shadow: 2px 2px 1px 1px var(--bg-color);
     transition-duration: var(--transition);
-  }
+  } */
   .menu ul li
   {
   	float: none;
@@ -190,17 +228,31 @@ ul.menu > li > a{
     border:0;
     height: 100%;
   }
+  .menu > li > a.current-page,.menu > li > a.current-page:link{
+    text-decoration-color: var(--accent-color);
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+  }
+
   .menu a:link:not(.burger), .menu a:visited:not(.burger)
   {
   	display: block;
   	font-weight: bold;
   	text-align: left;
-  	text-decoration: none;
   }
-  .menu li:hover
+  .menu a:link:not(.burger):not(.current-page), .menu a:visited:not(.burger):not(.current-page)
   {
-  	background-color: var(--fg-color);
+    text-decoration: none;
+  }
+  .menu > li > a:hover
+  {
+  	/* background-color: var(--fg-color); */
     transition-duration: var(--transition);
+    filter: invert(100%);
+  }
+  .menu > li > ul > li > a:hover{
+    filter: invert(100%);
   }
   .menu li:hover ul
   {
@@ -216,7 +268,7 @@ main, div.main.background,article{
   width: 100%;
 }
 div.main.background{
-  background-image: url("/images/axedraxlogo_notext_onetree.svg");
+  background-image: url("/assets/images/axedraxlogo_notext_onetree.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -278,14 +330,26 @@ h6{
 }
 p,li{
   font-size: 20px;
+
+}
+p, ul:not(.menu):not(.sub-menu) li, ol > li{
+  line-height: 1.8;
 }
 blockquote{
-  border-left: 1px solid black;
+  border-left: 3px solid var(--bg-color);
   padding-left: 1em;
   margin-left: 1em;
 }
-cite::before{
-  content:'- ';
+blockquote > ul:last-child{
+    list-style: none;
+}
+cite::before, blockquote > ul:last-child > li::before{
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--bg-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  /* margin-left: -0.5em; */
 }
 code{
   background:white;
@@ -298,7 +362,7 @@ code{
 }
 /* Home page */
 main.home{
-  height: 100%;
+  /* height: 100%; */
 }
 section.full{
   height:100vh;
@@ -308,44 +372,80 @@ section.full{
   flex-flow: column;
   justify-content: space-around;
 }
-section.halfimg{
-  display: flex;
-  border-bottom-width:0;
+section.halfimg {
+  border-bottom-width: 0;
+  position:relative;
 }
-section.halfimg:nth-child(odd){
-  flex-direction: row-reverse;
-}
-section.halfimg:nth-child(odd) > div:nth-child(2){
-  text-align: right;
-}
-.home section:nth-child(2) > div:first-child{
-  flex:1;
-  background: url("/images/etd-rochdale-smithy-bridge.jpg") no-repeat center center;
-  background-size: auto 100% ;
-}
-.home section.halfimg:nth-child(3) > div:first-child{
-  flex:1;
-  background: url("/images/axe.jpeg") no-repeat center center;
-  background-size: auto 100%;
-  width:50%;
+section.halfimg > div{
+  /* flex:1; */
+  /* width: 50%; */
+  height: 100%;
+  position: absolute;
+  top:0;
 }
 section.halfimg > div:nth-child(2){
-  flex:1;
+  background: url("/assets/images/axedraxlogo_notext_circle.svg") no-repeat center center;
+  background-size: auto 100%;
+}
+@media only screen and (min-width: 500px){
+  section.halfimg > div{
+    width: 50%;
+  }
+  section.halfimg > div:first-child{
+    width:50%;
+  }
+  section.halfimg:nth-child(odd) > div:nth-child(1){
+    left:50%;
+  }
+  section.halfimg:nth-child(even) > div:nth-child(1){
+    text-align: right;
+  }
+  section.halfimg:nth-child(even) > div:nth-child(2){
+    left:50%;
+  }
+}
+@media only screen and (max-width: 500px){
+  section.halfimg{
+    height: 200vh;
+    position: static;
+  }
+  section.halfimg > div{
+    position: static;
+    width: 100%;
+    height: 100vh;
+    text-align:center;
+  }
+}
+.home section.halfimg:nth-child(2) > div:nth-child(2){
+  background-image: url("/assets/images/photos/etd-rochdale-smithy-bridge.jpg");
+}
+.home section.halfimg:nth-child(4) > div:nth-child(2){
+  background-image: url("/assets/images/photos/axe.jpeg");
+}
+.home section.halfimg:nth-child(3) > div:nth-child(2){
+  background-image: url("/assets/images/photos/viewsfromabove/viewsfromabove.jpeg");
+}
+section.halfimg > div:first-child{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   padding: 2vw;
 }
 .home section:first-child{
-  background: url("/images/etd_drax.jpg") no-repeat bottom center fixed;
+  background: url("/assets/images/photos/etd_drax.jpg") no-repeat bottom center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
 }
+  /* The big home page title */
 .home section:first-child h1{
   color: var(--bg-color);
   font-size: min(22vw,167px);
 }
+.home button{
+  font-size: min(30px,11vw);
+}
+
 /* Inputs */
 form{
   display: flex;
@@ -361,12 +461,63 @@ textarea{
 .error{
   color:red;
 }
+/* Sign formatting */
+.signs{
+  display: flex;
+  flex-wrap: wrap;
+}
+.sign{
+  font-family: 'Permanent Marker', cursive, sans-serif;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30px;
+  max-width: 200px;
+  margin: max(2vw,15px);
+  padding: 25px;
+  background: linear-gradient(to left top,#AD8762,#D79D65);
+  clip-path: polygon(0 0, 95% 10%, 100% 90%, 0 90%);
+}
+/* Tweet formatting */
+.tweet > p, .tweet > p *{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+.card.tweet {
+  background-color: #15202b;
+}
+.card.tweet:hover {
+  background-color: #15202b;
+  box-shadow: 0 0 10px 0 #15202b;
+}
+.tweet .at, .tweet .hashtag{
+  color: rgb(27, 149, 224);
+}
+/* facebook card */
+section.facebook{
+  border-bottom-width: 0;
+}
+.facebook {
+  background-color: white;
+  padding: 1vw 2vw;
+  margin: 3vw 0;
+  box-shadow: 0 0 10px 0 #15202b;
+}
+.facebook img{
+  max-width: 100%;
+}
+
+/* Image page */
+.square img{
+  height: 100%;
+  max-height: 250px;
+  max-width: 100vw;
+}
 
 /* Event box formatting */
-a.event:hover{
+a.card:hover{
   color: inherit;
 }
-section.event{
+section.card{
   display: flex;
   justify-content:space-between;
   margin-top: 1vh;
@@ -374,27 +525,28 @@ section.event{
   transition: var(--transition);
   border-radius: 7px;
 }
-section.event:hover{
+section.card:hover{
   /* box-shadow: 0 0 6px 2px #000; */
 
   background-color: var(--fg-color);
 }
-section.event .date{
+section.card .date{
   flex-grow: 1;
   margin-right: 10px;
   text-align: center;
 }
-section.event .date time.day{
+section.card .date time.day{
   font-size: min(60px,10vw);
+  border-bottom: 5px solid var(--accent-color);
 }
-section.event .date time.month{
+section.card .date time.month{
   font-size: min(25px,7vw);
 }
-section.event .info{
+section.card .info{
   flex-grow: 2;
 
 }
-section.event h1{
+section.card h1{
   font-size: min(30px,11vw);
 }
 
@@ -404,18 +556,24 @@ section.event-links{
   justify-content: space-between;
 }
 
-section:not(:last-child):not(.full){
+section:not(:last-child):not(.full):not(.facebook){
+  padding-bottom: 1vw;
+  border-bottom: 1px solid var(--bg-color);
+}
+hr{
+  border:0;
   border-bottom: 1px solid var(--bg-color);
 }
 a {
   color: black;
   text-decoration: none;
   transition: 0.2s linear;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid var(--accent-color);
 }
 
 a:hover {
   border-color: var(--bg-color);
+  border-bottom-width: 5px;
   color: var(--bg-color);
 }
 

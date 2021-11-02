@@ -1,0 +1,24 @@
+{% for event in site.events %}
+{% assign evnt_start =  event.date | date:"%s" | times: 1  %}
+{% assign now_date = "now" | date:"%s" | times: 1 %}
+  {% if now_date < evnt_start %}
+    <a class ="card" href="{{ event.url }}">
+      <section class="card">
+        <div class="date">
+          <p>
+            <time class="day">{{ event.start_date | date:"%d" }}</time><br>
+            <time class="month">{{ event.start_date | date:"%b" }}</time>
+          </p>
+        </div>
+        <div class="info">
+          <h1>{{ event.title }}</h1>
+          <p>
+            <time>{{ event.start_date | date:"%H:%M %P" }}</time>
+            to
+            <time>{{ event.end_date |  date:"%H:%M %P "}}</time>
+          </p>
+        </div>
+      </section>
+    </a>
+  {% endif %}
+{% endfor %}

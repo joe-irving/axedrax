@@ -2,6 +2,9 @@
 layout: page
 title: Upcoming Events
 ---
+{% for e in site.events %}
+<a href="{{e.url}}">{{e.title}}</a>
+{% endfor %}
 {% for event in site.data.calendars["nar47r6qbo04v9j4htgave8nvk@group.calendar.google.com"] %}
 {% assign evnt_start =  event.start.dateTime | date:"%s" | times: 1  %}
 {% assign now_date = "now" | date:"%s" | times: 1 %}

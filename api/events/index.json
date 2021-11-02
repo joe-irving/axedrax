@@ -1,0 +1,10 @@
+---
+sitemap: false
+---
+{
+  "events" : [
+    {% for e in site.events %}
+      {{ e | jsonify }}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
