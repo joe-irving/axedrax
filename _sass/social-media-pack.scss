@@ -1,0 +1,44 @@
+/* Sign formatting */
+.signs{
+  display: flex;
+  flex-wrap: wrap;
+}
+.sign{
+  font-family: 'Permanent Marker', cursive, sans-serif;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30px;
+  max-width: 200px;
+  margin: calc(max(2vw,15px));
+  padding: 25px;
+  background: linear-gradient(to left top,#AD8762,#D79D65);
+  clip-path: polygon(0 0, 95% 10%, 100% 90%, 0 90%);
+}
+/* Tweet formatting */
+.tweet > p, .tweet > p *{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+.card.tweet {
+  background-color: #15202b;
+}
+.card.tweet:hover {
+  background-color: #15202b;
+  box-shadow: 0 0 10px 0 #15202b;
+}
+.tweet .at, .tweet .hashtag{
+  color: rgb(27, 149, 224);
+}
+/* facebook card */
+section.facebook{
+  border-bottom-width: 0;
+}
+.facebook {
+  background-color: white;
+  padding: 1vw 2vw;
+  margin: 3vw 0;
+  box-shadow: 0 0 10px 0 #15202b;
+}
+.facebook img{
+  max-width: 100%;
+}

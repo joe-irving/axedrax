@@ -1,0 +1,69 @@
+#can_embed_form{
+  .discussion-board{
+    display: none;
+  }
+  #can_embed_form_inner{
+    > *:not(form){
+      display: none;
+    }
+
+    #action_welcome_message{
+      #action_welcome_message_inner{
+        border: 2px solid $bg-color;
+        border-radius: $rounding;
+      }
+    }
+    #can_thank_you{
+
+    }
+    input[type=submit]{
+      background-color: $bg-color;
+      font-family: $header-font-stack;
+      border-radius: $rounding;
+      &:hover{
+        background-color: darken($bg-color, 10%);
+      }
+    }
+    input[type=text],
+    input[type=password],
+    input[type=url],
+    input[type=email],
+    input[type=tel],
+    input[type=number],select.can_select,span.can_select   {
+        border: 2px solid $bg-color;
+        background-color: $fg-color;
+        border-radius: $rounding;
+        &:focus{
+          border-color: $accent-color;
+        }
+      &::placeholder{
+        color: $text-color;
+      }
+    }
+    .floatlabel-wrapper {
+      .floatlabel-label{
+        color: $text-color;
+        &::after{
+          background-color: $fg-color;
+        }
+      }
+      .floatlabel-input{
+        &::placeholder{
+          color: $text-color;
+        }
+      }
+    }
+    .floatlabel-input, .can_select{
+      background-color: $fg-color;
+      border-radius: $rounding;
+    }
+  }
+    li{
+      &::before{
+        content: none;
+      }
+    }
+  > .clearfix, > .thank-you-message {
+    display: none;
+  }
+}

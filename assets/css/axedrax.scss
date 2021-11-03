@@ -1,0 +1,34 @@
+---
+---
+// Colours
+
+$bg-color: rgb(220,79,0);
+$accent-color: invert($bg-color);
+$fg-color: rgba(255,255,255,0.9);
+$text-color: black;
+
+
+$min-menu-size: 300px; /* currently relies on manual input */
+$transition: 0.3s;
+
+$nav-height: 5em;
+$max-width: 22cm;
+
+$rounding: 5px;
+
+// Fonts
+@font-face{
+  font-family:Fucxed-Caps;
+  src:url("/assets/fonts/FUCXEDCAPS.otf");
+}
+$header-font-stack: "Fucxed-Caps";
+
+@for $i from 1 through 100{
+  :nth-child(#{$i}){--nth:#{$i};}
+}
+
+@import "main",
+  "an-form",
+  "base",
+  "nav",
+  "social-media-pack";

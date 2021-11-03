@@ -1,0 +1,329 @@
+
+*{
+  box-sizing: border-box;
+}
+
+
+html{
+  background-color: $bg-color;
+  margin: 0;
+  padding:0;
+}
+
+body{
+  width:100%;
+  margin: 0;
+  padding:0;
+}
+*::selection{
+  color: black;
+  background-color: $accent-color;
+}
+header{
+  align-items: center;
+  text-align: center;
+}
+header h1 {
+  margin: 0.3cm;
+  font-size: calc(min(18vw,72px));
+}
+
+/* Main section of page */
+
+/* Main container positioning */
+main, div.main.background,article{
+  width: 100%;
+}
+div.main.background{
+  background-image: url("/assets/images/axedraxlogo_notext_onetree.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+main{
+  background: $fg-color;
+}
+article{
+  padding: 1em;
+  margin: 0 auto;
+  max-width: $max-width;
+  overflow: hidden;
+}
+/* Article formatting */
+input[type="submit"], button, .button{
+  background-color: $bg-color;
+  border: 0;
+  border-radius: 5px;
+  padding: 0.3cm 0.7cm;
+  color: #fff;
+  font-family: Fucxed-Caps;
+  transition: $transition;
+  &.hover{
+    filter: invert(100%);
+  }
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: Fucxed-Caps;
+  margin-top: 0.1em;
+  margin-bottom: 0.2em;
+}
+
+body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(button):not(code){
+  font-family:'Crimson Text', serif;
+}
+article > h1:first-child{
+  text-align: center;
+}
+h1{
+  font-size: calc(min(50px,14vw));
+}
+h2{
+  font-size: calc(min(35px,12vw));
+}
+h3{
+  font-size: calc(min(30px,11vw));
+}
+h4{
+  font-size: calc(min(28px,11vw));
+}
+h5{
+  font-size: calc(min(23px,9vw));
+}
+h6{
+  font-size: calc(min(20px,9vw));
+}
+p,li{
+  font-size: 20px;
+
+}
+p, ul:not(.menu):not(.sub-menu) li, ol > li{
+  line-height: 1.8;
+}
+blockquote{
+  border-left: 3px solid $bg-color;
+  padding-left: 1em;
+  margin-left: 1em;
+}
+blockquote > ul:last-child{
+    list-style: none;
+}
+cite::before, blockquote > ul:last-child > li::before{
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: $bg-color;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  /* margin-left: -0.5em; */
+}
+code{
+  background:white;
+  font-family: 'Courier New', monospace;
+  padding:2px;
+}
+
+.title{
+  text-align: center;
+}
+/* Home page */
+main.home{
+  /* height: 100%; */
+}
+section.full{
+  height:100vh;
+}
+.home section.full.title{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+section.halfimg {
+  border-bottom-width: 0;
+  position:relative;
+}
+section.halfimg > div{
+  /* flex:1; */
+  /* width: 50%; */
+  height: 100%;
+  position: absolute;
+  top:0;
+}
+section.halfimg > div:nth-child(2){
+  background: url("/assets/images/axedraxlogo_notext_circle.svg") no-repeat center center;
+  background-size: auto 100%;
+}
+@media only screen and (min-width: 500px){
+  section.halfimg > div{
+    width: 50%;
+  }
+  section.halfimg > div:first-child{
+    width:50%;
+  }
+  section.halfimg:nth-child(odd) > div:nth-child(1){
+    left:50%;
+  }
+  section.halfimg:nth-child(even) > div:nth-child(1){
+    text-align: right;
+  }
+  section.halfimg:nth-child(even) > div:nth-child(2){
+    left:50%;
+  }
+}
+@media only screen and (max-width: 500px){
+  section.halfimg{
+    height: 200vh;
+    position: static;
+  }
+  section.halfimg > div{
+    position: static;
+    width: 100%;
+    height: 100vh;
+    text-align:center;
+  }
+}
+.home section.halfimg:nth-child(2) > div:nth-child(2){
+  background-image: url("/assets/images/photos/etd-rochdale-smithy-bridge.jpg");
+}
+.home section.halfimg:nth-child(4) > div:nth-child(2){
+  background-image: url("/assets/images/photos/axe.jpeg");
+}
+.home section.halfimg:nth-child(3) > div:nth-child(2){
+  background-image: url("/assets/images/photos/viewsfromabove/viewsfromabove.jpeg");
+}
+section.halfimg > div:first-child{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2vw;
+}
+.home section:first-child{
+  background: url("/assets/images/photos/etd_drax.jpg") no-repeat bottom center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+  /* The big home page title */
+.home section:first-child h1{
+  color: $bg-color;
+  font-size: calc(min(22vw,167px));
+}
+.home button{
+  font-size: calc(min(30px,11vw));
+}
+
+/* Inputs */
+form{
+  display: flex;
+  flex-direction: column;
+}
+.newcontent{
+  height: 60vh;
+}
+textarea{
+  width: 100%;
+  flex-grow: 2
+}
+.error{
+  color:red;
+}
+
+
+/* Image page */
+.square img{
+  height: 100%;
+  max-height: 250px;
+  max-width: 100vw;
+}
+
+/* Event box formatting */
+a.card:hover{
+  color: inherit;
+}
+section.card{
+  display: flex;
+  justify-content:space-between;
+  margin-top: 1vh;
+  padding-left: 1vw;
+  transition: $transition;
+  border-radius: 7px;
+}
+section.card:hover{
+  /* box-shadow: 0 0 6px 2px #000; */
+
+  background-color: $fg-color;
+}
+section.card .date{
+  flex-grow: 1;
+  margin-right: 10px;
+  text-align: center;
+}
+section.card .date time.day{
+  font-size: calc(min(60px,10vw));
+  border-bottom: 5px solid $accent-color;
+}
+section.card .date time.month{
+  font-size: calc(min(25px,7vw));
+}
+section.card .info{
+  flex-grow: 2;
+
+}
+section.card h1{
+  font-size: calc(min(30px,11vw));
+}
+
+section.event-links{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section:not(:last-child):not(.full):not(.facebook){
+  padding-bottom: 1vw;
+  border-bottom: 1px solid $bg-color;
+}
+hr{
+  border:0;
+  border-bottom: 1px solid $bg-color;
+}
+a {
+  color: black;
+  text-decoration: none;
+  transition: 0.2s linear;
+  border-bottom: 2px solid $accent-color;
+}
+
+a:hover {
+  border-color: $bg-color;
+  border-bottom-width: 5px;
+  color: $bg-color;
+}
+
+nav > a, footer a {
+  border-bottom: 0;
+}
+nav > a:hover, footer a:hover {
+  color:inherit;
+}
+
+/* Footer */
+
+footer{
+  margin:1em;
+}
+
+img.icon{
+  transition: 300ms;
+  height: 36px;
+  /* -webkit-filter: grayscale(100%); */
+  /* filter: grayscale(100%); */
+  opacity: 0.5;
+  padding: 0 0.5cm ;
+}
+img.icon:hover{
+  /* -webkit-filter: grayscale(0);
+  filter: grayscale(0); */
+  opacity: 1;
+}
+div.social{
+  text-align: center;
+}

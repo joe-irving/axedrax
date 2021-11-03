@@ -1,0 +1,198 @@
+/* Navigation menu */
+.burger svg{
+  width: 40px;
+  height:40px;
+}
+.burger svg line{
+  stroke: black;
+  stroke-width: 2px;
+  stroke-linecap:round;
+}
+nav{
+  width: 100%;
+  top:0;
+  z-index: 100;
+
+}
+ul.menu  a:not(.burger){
+  font-family: Fucxed-Caps;
+  color: white;
+  background-color: $bg-color
+}
+/* For most phones */
+@media only screen and (max-width: 500px){
+  nav{
+    position: fixed;
+    top:0;
+    text-align: right;
+    padding-right: 0;
+    margin: 0;
+  }
+  nav > *:not(#menu-list-parent){
+    display: none;
+  }
+  a.burger{
+    border:0;
+  }
+  /* mobile menu opening and closing */
+  .burger.open{
+    display: block;
+  }
+  .burger.close{
+    display: none;
+  }
+  ul.menu{
+    padding: 5vw;
+    margin:0;
+  }
+  ul.menu li{
+    display: none;
+  }
+  ul.menu > li{
+    padding: 1vh 0;
+    border-top:1px dashed black;
+  }
+  ul.menu > li > ul > li::after{
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    width: 2em;
+    margin-left: -1.5em;
+  }
+  #menu-list:target{
+    background-color: $bg-color;
+  }
+  #menu-list:target li{
+    display: block;
+  }
+  #menu-list:target .burger.open{
+    display: none;
+  }
+  #menu-list:target .burger.close{
+    display: block;
+  }
+  #menu-list-parent:target > ul.menu li{
+    display: none;
+  }
+  #menu-list-parent:target > ul.menu .burger.open{
+    display: block;
+  }
+  #menu-list-parent:target .burger.close{
+    display: none;
+  }
+}
+/* Desktop and bigger */
+@media only screen and (min-width: 500px){
+  .burger{
+    display:none;
+  }
+  nav{
+    /*When this outputs -ve it defaults to 0 */
+    /* padding: 0 calc(calc(100% - $max-width) / 2); */
+    position: sticky;
+    height:100%;
+    border:0;
+    background-color: $bg-color;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+
+  ul.menu{
+    vertical-align:bottom;
+    border:0;
+    margin-left: 1em;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .menu a{
+    padding: 0.4em 0.6em;
+
+  }
+  .menu, .menu ul
+  {
+  	list-style: none;
+  	padding: 0 10px;
+    display: inline-block;
+  }
+  .menu li
+  {
+    vertical-align:bottom;
+  	float: left;
+  	margin-right: 3px;
+  	position: relative;
+    border: 0;
+    /* height: 100%; */
+  }
+  .menu > li{
+    /* border-top-left-radius: 1em;
+    border-top-right-radius: 1em; */
+  }
+  .menu ul
+  {
+  	position: absolute;
+    right: 0;
+    left: calc(min(-8vw, -100px));
+  	min-width: 100%;
+  	padding: 0;
+  	display: none;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    opacity: 0;
+    transition: $transition;
+  }
+  .menu ul li:last-child{
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+  }
+  /* .menu ul:hover{
+    box-shadow: 2px 2px 1px 1px $bg-color;
+    transition-duration: $transition;
+  } */
+  .menu ul li
+  {
+  	float: none;
+  	margin: 0;
+  	padding: 0;
+  }
+  .menu a{
+    vertical-align: bottom;
+    border:0;
+    height: 100%;
+  }
+  .menu > li > a.current-page,.menu > li > a.current-page:link{
+    text-decoration-color: $accent-color;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+  }
+
+  .menu a:link:not(.burger), .menu a:visited:not(.burger)
+  {
+  	display: block;
+  	font-weight: bold;
+  	text-align: left;
+  }
+  .menu a:link:not(.burger):not(.current-page), .menu a:visited:not(.burger):not(.current-page)
+  {
+    text-decoration: none;
+  }
+  .menu > li > a:hover
+  {
+  	/* background-color: $fg-color; */
+    transition-duration: $transition;
+    filter: invert(100%);
+  }
+  .menu > li > ul > li > a:hover{
+    filter: invert(100%);
+  }
+  .menu li:hover ul
+  {
+  	display: block;
+    opacity: 1;
+    background-color: $bg-color;
+  }
+}

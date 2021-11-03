@@ -1,13 +1,11 @@
 {
 	"version": 3,
-	"file": "styles.css",
+	"file": "style.css",
 	"sources": [
-		"styles.scss",
-		"_sass/main.scss"
+		"style.scss"
 	],
 	"sourcesContent": [
-		"@import \"main\";\n",
-		""
+		"// Silence is golden\n"
 	],
 	"names": [],
 	"mappings": ""
