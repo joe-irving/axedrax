@@ -22,23 +22,25 @@ module Jekyll
           "featured_image_url",
           "start_date",
           "end_date",
-          "location"
+          "location",
+          "status"
         ]
         requirements = {
-          "status" => "confirmed",
+          # "status" => "confirmed",
           "visibility" => "public",
           "action_network:hidden" => false
         }
         @public_events = []
         events.each do |e|
           new_event = {}
-          published = true
+          e['published'] = true
           requirements.each do |key,value|
             if e[key] != value
-              published = false
+              Jekyll.logger.debug "Action Network:",  "'#{key}' is '#{e[key]}' for #{e['title']} (#{e['browser_url']}) so not publishing"
+              e['published'] = false
             end
           end
-          return unless published
+          return unless e['published']
 
           slug = e['browser_url'].gsub("https://actionnetwork.org/events/","").gsub("/","")
 
@@ -65,7 +67,11 @@ module Jekyll
         collection_name="events"
         events_collection = Jekyll::Collection.new(site, collection_name)
         site.data['events'] = public_events
-        public_events.each do |e|
+        if !public_events
+          Jekyll.logger.info("Action Network:","No events found")
+          return
+        end
+        @public_events.each do |e|
           path = File.join(site.source, "_#{collection_name}", "#{e['slug']}.md")
           doc = Jekyll::Document.new(path, collection: events_collection, site: site)
           doc.merge_data!(e)

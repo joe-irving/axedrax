@@ -18,6 +18,7 @@ body{
 *::selection{
   color: black;
   background-color: $accent-color;
+  // border: 1px solid $accent-color;
 }
 header{
   align-items: center;

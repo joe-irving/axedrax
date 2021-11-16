@@ -3,7 +3,7 @@ sitemap: false
 ---
 {
   "events" : [
-    {% for e in site.events %}
+    {% for e in site.data.events %}
       {{ e | jsonify }}{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]

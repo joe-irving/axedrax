@@ -6,7 +6,8 @@ title: Take Action
   <p>
     Upcoming actions:
   </p>
-  {% include events-list.html %}
+  {% assign actions = site.events | sort: "date" %}
+  {% include events-list.html events=actions %}
 </section>
 <section>
   <p>

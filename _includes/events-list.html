@@ -1,7 +1,7 @@
-{% for event in site.events %}
+{% for event in include.events %}
 {% assign evnt_start =  event.date | date:"%s" | times: 1  %}
 {% assign now_date = "now" | date:"%s" | times: 1 %}
-  {% if now_date < evnt_start %}
+  {% if now_date < evnt_start and event['status'] !="cancelled" %}
     <a class ="card" href="{{ event.url }}">
       <section class="card">
         <div class="date">

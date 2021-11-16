@@ -1,0 +1,51 @@
+---
+layout: post
+---
+{% capture image %}
+{%if page.featured_image_url %}
+<img src="{{ page.featured_image_url }}" alt="">
+{% endif %}
+{% endcapture %}
+
+{% capture title %}{{ page.title }}{% endcapture %}
+
+{% capture date %}
+{% if start_day < end_day %}
+<p class="Chaos-Event-Date">
+  <time>{{ page.start_date | date: "%k:%M %A %e %B" }}</time>
+  to
+  <time>{{ page.end_date | date: "%k:%M %A %e %B" }}</time>
+</p>
+{% else %}
+<p class="Chaos-Event-Date">
+  {{ page.start_date | date: "%A %e %B" }}
+</p>
+<p class="Chaos-Event-Date">
+  <time>{{ page.start_date | date: "%k:%M" }}</time>{% if page.end_date %}
+  to
+  <time>{{ page.end_date | date: "%k:%M" }}</time>{% endif %}
+</p>
+{% endif %}
+{% endcapture %}
+
+{% capture address %}
+<address class="">
+  <p>
+    {{ page.location.venue }},<br>
+    {% for l in page.location.address_lines %}{{ l }},<br>{% endfor %}
+    {{ page.location.locality  }},<br>
+    {{ page.location.postal_code  }}
+  </p>
+</address>
+<p><a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination={{ page.location.location.latitude }}%2C{{ page.location.location.longitude }}">Get directions...</a></p>
+{% endcapture %}
+
+<section>
+  {{ address }}
+</section>
+
+{{ content }}
+
+<link href='https://actionnetwork.org/css/style-embed-whitelabel-v3.css' rel='stylesheet' type='text/css'/>
+<script src='https://actionnetwork.org/widgets/v4/event/{{ page.slug }}?format=js&source=widget'></script>
+<div id='can-event-area-{{ page.slug }}' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>

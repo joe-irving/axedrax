@@ -5,7 +5,7 @@ permalink: /press/
 ---
 
 Contact email for press enquiries:
-[media.axedrax@pm.me](mailto:media.axedrax@pm.me).
+[media.axedrax@gmail.com](mailto:media.axedrax@gmail.com).
 
 ## Recent press releases
 
