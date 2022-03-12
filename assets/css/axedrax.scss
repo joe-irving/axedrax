@@ -18,10 +18,10 @@ $rounding: 5px;
 
 // Fonts
 @font-face{
-  font-family:Fucxed-Caps;
-  src:url("/assets/fonts/FUCXEDCAPS.otf");
+  font-family: Bernoru;
+  src:url("/assets/fonts/Bernoru-BlackSemiCondensed.woff");
 }
-$header-font-stack: "Fucxed-Caps";
+$header-font-stack: "Bernoru";
 
 @for $i from 1 through 100{
   :nth-child(#{$i}){--nth:#{$i};}

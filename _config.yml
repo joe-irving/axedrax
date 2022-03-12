@@ -3,7 +3,7 @@ tagline: The collective that oppose the company Drax.
 description: >-
   The collective that oppose the company Drax. We are direct action
   groups, local campaigns and individuals.
-url: "https://www.axedrax.uk"
+url: "https://axedrax.uk"
 
 
 permalink: /:categories/:title/
@@ -12,11 +12,20 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-airtable-import
 
 
 
 action_network:
   event_campaign: 8e44ce3c-551b-4d14-9192-3a39f9cde323
+
+airtable:
+  actions:
+    app: app47RLfKgIKcYIKZ
+    table: tblWptbdmJRRPeDjQ
+    view: viwxHgIkpQizm0Pjg
+    collection:
+      layout: page
 
 defaults:
   - scope:
@@ -29,6 +38,8 @@ collections:
     output: true
   templates:
     output: false
+  actions:
+    output: true
 
 future: true
 

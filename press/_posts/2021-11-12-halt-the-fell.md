@@ -1,6 +1,7 @@
 ---
 layout: post
 title: DRAX WOOD PELLET TRAIN HALTED BY PROTEST
+image: 
 ---
 An activist from the Axe Drax coalition has just halted a wood pellet train going to Drax Power Station outside Selby. Dressed in bright orange hi vis and carrying a Extinction Rebellion flag the activist has climbed on top of the train to send a clear message to COP26: stop the fell. Banners emblazoned with the words 'Forests Are Not Fuel' and 'Moratorium on Tree Felling' line the tracks. The activists have created a visually striking and physically disruptive demonstration against the ecocidal use of biofuels.
 

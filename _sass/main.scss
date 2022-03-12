@@ -55,16 +55,16 @@ input[type="submit"], button, .button{
   background-color: $bg-color;
   border: 0;
   border-radius: 5px;
-  padding: 0.3cm 0.7cm;
+  padding: 0 0.7cm 0.3cm 0.7cm;
   color: #fff;
-  font-family: Fucxed-Caps;
+  font-family: $header-font-stack;
   transition: $transition;
   &.hover{
     filter: invert(100%);
   }
 }
 h1,h2,h3,h4,h5,h6{
-  font-family: Fucxed-Caps;
+  font-family: Bernoru;
   margin-top: 0.1em;
   margin-bottom: 0.2em;
 }
@@ -136,6 +136,7 @@ section.full{
   display: flex;
   flex-flow: column;
   justify-content: space-around;
+  
 }
 section.halfimg {
   border-bottom-width: 0;
