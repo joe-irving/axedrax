@@ -1,4 +1,5 @@
-{% for tweet in site.data.tweets %}
+{% assign tweets = site.data.social_media | where: "platform", "Twitter" %}
+{% for tweet in tweets %}
   <a class="card" target="_blank" href="https://twitter.com/intent/tweet?text={{ tweet.text | url_encode }}">
     <section class="card tweet">
       <p>

@@ -12,7 +12,7 @@ social media. There are some examples below.
 
 ## Images
 
-There should be images in our [photo bank](/images)
+There should be images in our [photo bank](https://drive.google.com/drive/folders/1Xvg8epyq05EU6lk25ioBgTSXZoV7VbOc?usp=sharing)
 
 # Examples
 

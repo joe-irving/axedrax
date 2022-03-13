@@ -26,6 +26,10 @@ airtable:
     view: viwxHgIkpQizm0Pjg
     collection:
       layout: page
+  social_media:
+    app: app47RLfKgIKcYIKZ
+    table: tblJ2UJA30ykzoKLW
+    view: viwkpMX7eeVPrUzdS
 
 defaults:
   - scope:
@@ -57,7 +61,7 @@ exclude:
 social:
   name: Axe Drax
   links:
-    - https://www.facebook.com/axedraxlovetrees
+    - https://www.facebook.com/axedraxgroup
     - https://www.instagram.com/axe_drax/
 locale: en_GB
 image: /assets/images/photos/etd_drax.jpg

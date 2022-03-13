@@ -27,25 +27,30 @@ And when we must, we disrupt.
 You don't have to physically take part in any action, and you definitely
 don't have to do anything illegal unless you want to. There are always
 thing to do, plan, organise that will need people. We are going up
-against the climate policy of a company that literally has staff on the
-"independent" Committee on Climate Change. It is going to take work.
+against the a climate wrecking billion dollar company that deploys every
+'lobbying technique' in the book. It is going to take work.
 
 ---
 
-# Power to the people
+# Demands
 
-It is important we appreciated Drax as part of a larger, failing,
-system. The fact that Drax can get away with unmeasured pollution and
-dangerous "green energy" is testament to the failure of the current
-political system. We must move to a world where people are in control,
-not big businesses like Drax.
+1. Tell the truth
+1. Defund Biomass
+1. Fund Community Solutions
 
-If an informed, legally binding, citizen's assembly were to decide where
-government money goes we would not be in this mess. We must fight for
-it.
+## Tell the truth
 
-The future of this country is community based, moving away from a
-privatised and centralised energy system to one that works for everyone.
+Biomass is not a renewable form of fuel. Destroying old growth forests for fuel is not sustainable. In the last year alone Drax received £832 million in subsidies from the UK government meant for renewables. This money, taken from the public, has been used to fund the destruction of forests and health world-wide. By classifying biomass as renewable this allows them to take billions from the public whilst destroying the planet. The government must be honest about the harm caused by biofuels, to the planet and people around the world.
+
+It is time for governments and corporations to tell the truth about biomass.
+
+## Defund Biomass
+
+Remove the £billions in subsidies given Drax and other biomass power stations around the UK. This money is used to fund death and destruction around the world, harming people of colour and poorer communities the most whilst corporations profit. If we stop the money we stop the train of destruction.
+
+## Fund Community Solutions
+
+The £billions given to biomass should be used to fund a just transition: furlough; retrain and transfer workers in the biomass industry; invest in education, affordable housing and health; fund genuine renewable energy; develop a plan of de-growth moving away from profit motives fuelling the climate crisis towards community based solutions. 
 
 ---
 

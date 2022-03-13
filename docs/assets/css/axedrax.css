@@ -224,11 +224,11 @@ main { background: rgba(255, 255, 255, 0.9); }
 article { padding: 1em; margin: 0 auto; max-width: 22cm; overflow: hidden; }
 
 /* Article formatting */
-input[type="submit"], button, .button { background-color: #dc4f00; border: 0; border-radius: 5px; padding: 0 0.7cm 0.3cm 0.7cm; color: #fff; font-family: "Bernoru"; transition: 0.3s; }
+input[type="submit"], button, .button { background-color: #dc4f00; border: 0; border-radius: 5px; padding: 0 0.7cm 0.3cm 0.7cm; color: #fff; font-family: "Bernoru"; text-transform: uppercase; transition: 0.3s; }
 
 input.hover[type="submit"], button.hover, .button.hover { filter: invert(100%); }
 
-h1, h2, h3, h4, h5, h6 { font-family: Bernoru; margin-top: 0.1em; margin-bottom: 0.2em; }
+h1, h2, h3, h4, h5, h6 { font-family: "Bernoru"; text-transform: uppercase; margin-top: 0.1em; margin-bottom: 0.2em; }
 
 body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(button):not(code) { font-family: 'Crimson Text', serif; }
 
@@ -283,7 +283,7 @@ section.halfimg > div:nth-child(2) { background: url("/assets/images/axedraxlogo
 
 .home section.halfimg:nth-child(3) > div:nth-child(2) { background-image: url("/assets/images/photos/viewsfromabove/viewsfromabove.jpeg"); }
 
-section.halfimg > div:first-child { display: flex; flex-direction: column; justify-content: center; padding: 2vw; }
+section.halfimg > div:first-child { display: flex; flex-direction: column; justify-content: center; padding: 2vw; align-items: center; }
 
 .home section:first-child { background: url("/assets/images/photos/etd_drax.jpg") no-repeat bottom center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; }
 
@@ -377,7 +377,7 @@ div.social { text-align: center; }
 
 .burger svg line { stroke: black; stroke-width: 2px; stroke-linecap: round; }
 
-nav { width: 100%; top: 0; z-index: 100; }
+nav { width: 100%; top: 0; z-index: 100; text-transform: uppercase; }
 
 ul.menu a:not(.burger) { font-family: "Bernoru"; color: white; background-color: #dc4f00; font-size: 1.5em; }
 

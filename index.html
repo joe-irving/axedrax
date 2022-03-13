@@ -3,6 +3,7 @@ title: Home
 layout: home
 image: /assets/images/photos/etd_drax.jpg
 ---
+{% assign latest_event = site.events | first %}
 <section class="full title">
   <h1>AXE&#8239;DRAX</h1>
   <p>
@@ -25,20 +26,28 @@ image: /assets/images/photos/etd_drax.jpg
 </section>
 <section class="full halfimg">
   <div>
-    <p>
-      See what you can do, from direct action to ruffling Drax's feathers
-      by turning up uninvited to online events.
-    </p>
-    <a href="/action" class="button"><button>Take action</button></a>
+
+    {% unless latest_event.url.size > 1 %}
+      <p>
+        See what you can do, from direct action to ruffling Drax's feathers
+        by turning up uninvited to online events.
+      </p>
+      <a href="/action" class="button"><button>Take action</button></a>
+    {% else %}
+      <p>
+        Join us for {{ latest_event.title }} on {{ latest_event.date | date: "%a %d %B" }} at {{ latest_event.date | date: "%r" }}
+      </p>
+      <a href="{{ latest_event.url | relative_url }}" class="button"><button>Take action</button></a>
+    {% endunless %}
   </div>
-  <div></div>
+  <div style="background-image:url('/assets/images/photos/12-11-2022-halt-the-felling.jpeg')" ></div>
 </section>
 <section class="full halfimg">
   <div>
     <p>
-      So what is the fuss about with Drax? It can't be that bad right??
+      Read more about Drax Power station below
     </p>
     <a href="/about/drax" class="button"><button>About Drax</button></a>
   </div>
-  <div></div>
+  <div  style="background-image:url('/assets/images/photos/axe+drax_leeds_Neil+terry+photography_30.11.2021_001.jpg')"></div>
 </section>

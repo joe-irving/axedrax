@@ -1,4 +1,5 @@
-{% for post in site.data.fb %}
+{% assign fb_posts = site.data.social_media | where: "platform", "Facebook" %}
+{% for post in fb_posts %}
 {% if post.text | lstrip != "" %}
   <section class="facebook">
     <p>{{ post.text | newline_to_br  }}</p>

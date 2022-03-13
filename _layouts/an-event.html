@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 ---
 {% capture image %}
 {%if page.featured_image_url %}
@@ -29,6 +29,7 @@ layout: post
 {% endcapture %}
 
 {% capture address %}
+{% if page.location.venue.size > 0 %}
 <address class="">
   <p>
     {{ page.location.venue }},<br>
@@ -38,8 +39,16 @@ layout: post
   </p>
 </address>
 <p><a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination={{ page.location.location.latitude }}%2C{{ page.location.location.longitude }}">Get directions...</a></p>
+{% endif %}
 {% endcapture %}
 
+<section class=title>
+  {{ date }}
+  <span class="share">
+    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"><img class="icon" src="/assets/images/facebook.svg" title="Facebook" alt="Share to Facebook"></a>
+    <a target="_blank" href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}"><img class="icon" src="/assets/images/twitter.svg" title="Twitter" alt="Share on Twitter"></a>
+  </span>
+</section>
 <section>
   {{ address }}
 </section>

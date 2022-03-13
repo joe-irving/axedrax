@@ -12,7 +12,7 @@ nav{
   width: 100%;
   top:0;
   z-index: 100;
-
+  text-transform: uppercase;
 }
 ul.menu  a:not(.burger){
   font-family: $header-font-stack;

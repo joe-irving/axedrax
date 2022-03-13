@@ -58,13 +58,15 @@ input[type="submit"], button, .button{
   padding: 0 0.7cm 0.3cm 0.7cm;
   color: #fff;
   font-family: $header-font-stack;
+  text-transform: uppercase;
   transition: $transition;
   &.hover{
     filter: invert(100%);
   }
 }
 h1,h2,h3,h4,h5,h6{
-  font-family: Bernoru;
+  font-family: $header-font-stack;
+  text-transform: uppercase;
   margin-top: 0.1em;
   margin-bottom: 0.2em;
 }
@@ -136,7 +138,7 @@ section.full{
   display: flex;
   flex-flow: column;
   justify-content: space-around;
-  
+
 }
 section.halfimg {
   border-bottom-width: 0;
@@ -196,6 +198,7 @@ section.halfimg > div:first-child{
   flex-direction: column;
   justify-content: center;
   padding: 2vw;
+  align-items: center;
 }
 .home section:first-child{
   background: url("/assets/images/photos/etd_drax.jpg") no-repeat bottom center fixed;
