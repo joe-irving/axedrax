@@ -30,12 +30,18 @@ airtable:
     app: app47RLfKgIKcYIKZ
     table: tblJ2UJA30ykzoKLW
     view: viwkpMX7eeVPrUzdS
+  events:
+    app: appeyYdXaVR7N3IkP
+    table: tblEN3r6eYjhkiLUj
+    view: viwwM3kKP90feRNc8
+    collection:
+      layout: page
 
 defaults:
   - scope:
       path: ""
     values:
-      image: /assets/images/photos/etd_drax.jpg
+      image: /assets/images/photos/andomeniconi/NZ6_1708.jpg_1200.jpg
 
 collections:
   events:
@@ -50,7 +56,7 @@ future: true
 facebook:
   publisher: https://www.facebook.com/axedraxlovetrees
 
-logo: /assets/images/axedraxlogo_notext_circle.svg
+logo: /assets/images/logo_new_small.png
 
 source: .
 destination: ./docs
@@ -64,4 +70,4 @@ social:
     - https://www.facebook.com/axedraxgroup
     - https://www.instagram.com/axe_drax/
 locale: en_GB
-image: /assets/images/photos/etd_drax.jpg
+image: /assets/images/photos/andomeniconi/NZ6_1708.jpg_2400.jpg
