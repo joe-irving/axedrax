@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Campaigners facing prison for standing up to tree burning giant Drax
-image:
+image: https://lh3.google.com/u/6/d/1f-1kmlVfSs8ntltuYNayqrXqPOb4t4j3=w1920-h902-iv1
 excerpt: >-
   2 people have been charged in the last week for obstructing the Drax train in November and December last year;
   One person is charged with offences that have a maximum sentence of life in prison;
