@@ -14,11 +14,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-airtable-import
 
-
-
-action_network:
-  event_campaign: 8e44ce3c-551b-4d14-9192-3a39f9cde323
-
 airtable:
   actions:
     app: app47RLfKgIKcYIKZ
@@ -31,11 +26,20 @@ airtable:
     table: tblJ2UJA30ykzoKLW
     view: viwkpMX7eeVPrUzdS
   events:
-    app: appeyYdXaVR7N3IkP
-    table: tblEN3r6eYjhkiLUj
-    view: viwwM3kKP90feRNc8
+    app: app47RLfKgIKcYIKZ
+    table: tbl6kgoFNlw6KbP5Z
+    view: viwr5LXBeOPsPDsiT
     collection:
-      layout: page
+      layout: an-event
+    fields:
+      - Title
+      - URL
+      - Description
+      - Image
+      - Start Date
+      - End Date
+      - Slug
+      - Status
 
 defaults:
   - scope:

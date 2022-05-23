@@ -2,8 +2,8 @@
 layout: page
 ---
 {% capture image %}
-{%if page.featured_image_url %}
-<img src="{{ page.featured_image_url }}" alt="">
+{%if page.image %}
+<img src="{{ page.image }}" alt="">
 {% endif %}
 {% endcapture %}
 
@@ -42,6 +42,7 @@ layout: page
 {% endif %}
 {% endcapture %}
 
+{{image}}
 <section class=title>
   {{ date }}
   <span class="share">
@@ -49,11 +50,13 @@ layout: page
     <a target="_blank" href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}"><img class="icon" src="/assets/images/twitter.svg" title="Twitter" alt="Share on Twitter"></a>
   </span>
 </section>
+
 <section>
   {{ address }}
 </section>
 
-{{ content }}
+  {{ page.description }}
+
 
 <link href='https://actionnetwork.org/css/style-embed-whitelabel-v3.css' rel='stylesheet' type='text/css'/>
 <script src='https://actionnetwork.org/widgets/v4/event/{{ page.slug }}?format=js&source=widget'></script>

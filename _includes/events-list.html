@@ -1,7 +1,7 @@
 {% for event in include.events %}
-{% assign evnt_start =  event.date | date:"%s" | times: 1  %}
-{% assign now_date = "now" | date:"%s" | times: 1 %}
-  {% if now_date < evnt_start and event['status'] !="cancelled" %}
+  {% capture now_unix %}{{'now' | date: '%s'}}{% endcapture %}
+  {% capture start_time %}{{event.start_date | date: '%s'}}{% endcapture %}
+  {% if start_time > now_unix or include.future != true %}
     <a class ="card" href="{{ event.url }}">
       <section class="card">
         <div class="date">

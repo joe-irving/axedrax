@@ -14,5 +14,5 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-feed'
   gem 'jekyll-seo-tag'
-  gem 'jekyll-airtable-import'
+  gem 'jekyll-airtable-import', git: "https://github.com/tippingpointuk/jekyll-airtable-import", branch: 'master'
 end
