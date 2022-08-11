@@ -30,7 +30,7 @@ airtable:
     table: tbl6kgoFNlw6KbP5Z
     view: viwr5LXBeOPsPDsiT
     collection:
-      layout: an-event
+      layout: at-event
     fields:
       - Title
       - URL
@@ -40,6 +40,9 @@ airtable:
       - End Date
       - Slug
       - Status
+      - Address
+      - Latitude
+      - Longitude
 
 defaults:
   - scope:

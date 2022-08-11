@@ -1,0 +1,62 @@
+---
+layout: page
+---
+{% capture image %}
+{%if page.image %}
+<img src="{{ page.image }}" alt="">
+{% endif %}
+{% endcapture %}
+
+{% capture title %}{{ page.title }}{% endcapture %}
+
+{% capture date %}
+{% if start_day < end_day %}
+<p class="Chaos-Event-Date">
+  <time>{{ page.start_date | date: "%k:%M %A %e %B" }}</time>
+  to
+  <time>{{ page.end_date | date: "%k:%M %A %e %B" }}</time>
+</p>
+{% else %}
+<p class="Chaos-Event-Date">
+  {{ page.start_date | date: "%A %e %B" }}
+</p>
+<p class="Chaos-Event-Date">
+  <time>{{ page.start_date | date: "%k:%M" }}</time>{% if page.end_date %}
+  to
+  <time>{{ page.end_date | date: "%k:%M" }}</time>{% endif %}
+</p>
+{% endif %}
+{% endcapture %}
+
+{% capture address %}
+{% if page.address != "Online" %}
+<address class="">
+  <p>
+    {{ page.address }}
+  </p>
+</address>
+<p><a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination={{ page.latitude }}%2C{{ page.longitude }}">Get directions...</a></p>
+{% else %}
+<p>This event is online.</p>
+{% endif %}
+{% endcapture %}
+
+{{image}}
+<section class=title>
+  {{ date }}
+  <span class="share">
+    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"><img class="icon" src="/assets/images/facebook.svg" title="Facebook" alt="Share to Facebook"></a>
+    <a target="_blank" href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}"><img class="icon" src="/assets/images/twitter.svg" title="Twitter" alt="Share on Twitter"></a>
+  </span>
+</section>
+
+<section>
+  {{ address }}
+</section>
+
+  {{ page.description }}
+
+
+<link href='https://actionnetwork.org/css/style-embed-whitelabel-v3.css' rel='stylesheet' type='text/css'/>
+<script src='https://actionnetwork.org/widgets/v4/event/{{ page.slug }}?format=js&source=widget'></script>
+<div id='can-event-area-{{ page.slug }}' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>
