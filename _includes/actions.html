@@ -1,16 +1,18 @@
-
-{% for action in site.posts %}
-{% if action.categories contains "action" %}
+{% for action in site.actions %}
   <a class ="card" href="{{ action.url }}">
     <section class="card {{ action.flavour }}">
       <div class="flavour">
+        {% capture icon_exists %}{% file_exists _includes/icon-{{ action.flavour }} %}{% endcapture %}
+        {% if icon_exists %}
+          {% include icon-{{ action.flavour  }} %}
+        {% else %}
         <p>{{ action.flavour | capitalize}}</p>
+        {% endif %}
       </div>
-      <div>
+      <div class="action-info">
         <h2>{{ action.title }}</h2>
         <p>{{ action.summary }}</p>
       </div>
     </section>
   </a>
-  {% endif %}
 {% endfor %}

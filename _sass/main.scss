@@ -132,7 +132,10 @@ main.home{
   /* height: 100%; */
 }
 section.full{
-  height:100vh;
+  min-height: 100vh;
+}
+section.half{
+  min-height: 50vh;
 }
 .home section.full.title{
   display: flex;
@@ -141,48 +144,28 @@ section.full{
 
 }
 section.halfimg {
-  border-bottom-width: 0;
-  position:relative;
+  display: flex;
 }
 section.halfimg > div{
-  /* flex:1; */
-  /* width: 50%; */
-  height: 100%;
-  position: absolute;
-  top:0;
+  flex-basis: 50%;
 }
 section.halfimg > div:nth-child(2){
   background: url("/assets/images/axedraxlogo_notext_circle.svg") no-repeat center center;
-  background-size: auto 100%;
+  background-size: cover;
+  flex-grow: 1;
+  min-height: 200px;
 }
+
 @media only screen and (min-width: 500px){
-  section.halfimg > div{
-    width: 50%;
-  }
-  section.halfimg > div:first-child{
-    width:50%;
-  }
-  section.halfimg:nth-child(odd) > div:nth-child(1){
-    left:50%;
-  }
-  section.halfimg:nth-child(even) > div:nth-child(1){
-    text-align: right;
-  }
-  section.halfimg:nth-child(even) > div:nth-child(2){
-    left:50%;
+  section.halfimg:nth-child(odd){
+    flex-direction: row-reverse;
   }
 }
 @media only screen and (max-width: 500px){
   section.halfimg{
-    height: 200vh;
-    position: static;
+    flex-direction: column;
   }
-  section.halfimg > div{
-    position: static;
-    width: 100%;
-    height: 100vh;
-    text-align:center;
-  }
+
 }
 .home section.halfimg:nth-child(2) > div:nth-child(2){
   background-image: url("/assets/images/photos/etd-rochdale-smithy-bridge.jpg");
@@ -245,35 +228,45 @@ a.card:hover{
 }
 section.card{
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   margin-top: 1vh;
   padding-left: 1vw;
   transition: $transition;
   border-radius: 7px;
+  &:hover {
+    background-color: $fg-color;
+  }
+  .date {
+    margin-right: 10px;
+    text-align: center;
+    time {
+      &.day{
+        font-size: calc(min(60px,10vw));
+        border-bottom: 5px solid $accent-color;
+      }
+      &.month {
+        font-size: calc(min(25px,7vw));
+      }
+    }
+  }
+  .info {
+    flex-grow: 2;
+  }
+  h1 {
+    font-size: calc(min(30px,11vw));
+  }
+  .flavour {
+    flex-basis: 20%;
+    min-width: calc(min(25vw, 100px));
+    // svg {
+    //   max-width: 33%;
+    // }
+  }
+  .action-info {
+    flex-basis: 80%;
+  }
 }
-section.card:hover{
-  /* box-shadow: 0 0 6px 2px #000; */
 
-  background-color: $fg-color;
-}
-section.card .date{
-  margin-right: 10px;
-  text-align: center;
-}
-section.card .date time.day{
-  font-size: calc(min(60px,10vw));
-  border-bottom: 5px solid $accent-color;
-}
-section.card .date time.month{
-  font-size: calc(min(25px,7vw));
-}
-section.card .info{
-  flex-grow: 2;
-
-}
-section.card h1{
-  font-size: calc(min(30px,11vw));
-}
 
 section.event-links{
   display: flex;
@@ -281,7 +274,7 @@ section.event-links{
   justify-content: space-between;
 }
 
-section:not(:last-child):not(.full):not(.facebook){
+section:not(:last-child):not(.full):not(.facebook):not(.no-border){
   padding-bottom: 1vw;
   border-bottom: 1px solid $bg-color;
 }

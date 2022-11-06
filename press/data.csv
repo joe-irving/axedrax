@@ -1,0 +1,5 @@
+---
+---
+{% assign posts = site.posts | where: "categories", "press" %}title,excerpt,image,date
+{% for p in posts %}{{ p.title }},"{{ p.excerpt }}",{{ p.image }},{{ p.date }},
+{% endfor %}

@@ -54,11 +54,6 @@ The £billions given to biomass should be used to fund a just transition: furlou
 
 ---
 
-## More established groups
+## Stop Burning Trees Coalition
 
-There is an amazing campaign running at the moment about biomass and the
-UK Gov's genocidal climate policy called [Cut Carbon Not
-Forests](https://www.cutcarbonnotforests.org) that is doing great work.
-[Biofuelwatch](https://biofuelwatch.org.uk) have been campaigning around
-this for years, and should be referred to if there are ever in need of
-information about biomass and bioenergy.
+Axe Drax is a part of the Stop Burning Trees coalition. [Read more on their website](http://stopburningtrees.org)

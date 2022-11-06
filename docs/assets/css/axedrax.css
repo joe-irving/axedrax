@@ -263,19 +263,21 @@ code { background: white; font-family: 'Courier New', monospace; padding: 2px; }
 /* Home page */
 main.home { /* height: 100%; */ }
 
-section.full { height: 100vh; }
+section.full { min-height: 100vh; }
+
+section.half { min-height: 50vh; }
 
 .home section.full.title { display: flex; flex-flow: column; justify-content: space-around; }
 
-section.halfimg { border-bottom-width: 0; position: relative; }
+section.halfimg { display: flex; }
 
-section.halfimg > div { /* flex:1; */ /* width: 50%; */ height: 100%; position: absolute; top: 0; }
+section.halfimg > div { flex-basis: 50%; }
 
-section.halfimg > div:nth-child(2) { background: url("/assets/images/axedraxlogo_notext_circle.svg") no-repeat center center; background-size: auto 100%; }
+section.halfimg > div:nth-child(2) { background: url("/assets/images/axedraxlogo_notext_circle.svg") no-repeat center center; background-size: cover; flex-grow: 1; min-height: 200px; }
 
-@media only screen and (min-width: 500px) { section.halfimg > div { width: 50%; } section.halfimg > div:first-child { width: 50%; } section.halfimg:nth-child(odd) > div:nth-child(1) { left: 50%; } section.halfimg:nth-child(even) > div:nth-child(1) { text-align: right; } section.halfimg:nth-child(even) > div:nth-child(2) { left: 50%; } }
+@media only screen and (min-width: 500px) { section.halfimg:nth-child(odd) { flex-direction: row-reverse; } }
 
-@media only screen and (max-width: 500px) { section.halfimg { height: 200vh; position: static; } section.halfimg > div { position: static; width: 100%; height: 100vh; text-align: center; } }
+@media only screen and (max-width: 500px) { section.halfimg { flex-direction: column; } }
 
 .home section.halfimg:nth-child(2) > div:nth-child(2) { background-image: url("/assets/images/photos/etd-rochdale-smithy-bridge.jpg"); }
 
@@ -309,9 +311,9 @@ a.card:hover { color: inherit; }
 
 section.card { display: flex; justify-content: space-between; margin-top: 1vh; padding-left: 1vw; transition: 0.3s; border-radius: 7px; }
 
-section.card:hover { /* box-shadow: 0 0 6px 2px #000; */ background-color: rgba(255, 255, 255, 0.9); }
+section.card:hover { background-color: rgba(255, 255, 255, 0.9); }
 
-section.card .date { flex-grow: 1; margin-right: 10px; text-align: center; }
+section.card .date { margin-right: 10px; text-align: center; }
 
 section.card .date time.day { font-size: calc(min(60px,10vw)); border-bottom: 5px solid #23b0ff; }
 
@@ -321,9 +323,13 @@ section.card .info { flex-grow: 2; }
 
 section.card h1 { font-size: calc(min(30px,11vw)); }
 
+section.card .flavour { flex-basis: 20%; min-width: calc(min(25vw, 100px)); }
+
+section.card .action-info { flex-basis: 80%; }
+
 section.event-links { display: flex; flex-wrap: wrap; justify-content: space-between; }
 
-section:not(:last-child):not(.full):not(.facebook) { padding-bottom: 1vw; border-bottom: 1px solid #dc4f00; }
+section:not(:last-child):not(.full):not(.facebook):not(.no-border) { padding-bottom: 1vw; border-bottom: 1px solid #dc4f00; }
 
 hr { border: 0; border-bottom: 1px solid #dc4f00; }
 
