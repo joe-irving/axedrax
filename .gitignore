@@ -3,3 +3,6 @@ _site
 vendor
 Gemfile.lock
 docs/*/**
+.env
+
+assets/airtable
