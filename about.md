@@ -34,23 +34,21 @@ against the a climate wrecking billion dollar company that deploys every
 
 # Demands
 
-1. Tell the truth
+1. Tell the Truth: Biomass ≠ Green
 1. Defund Biomass
-1. Fund Community Solutions
+1. Fund Real Solutions
 
-## Tell the truth
+## Tell the Truth: Biomass ≠ Green
 
-Biomass is not a renewable form of fuel. Destroying old growth forests for fuel is not sustainable. In the last year alone Drax received £832 million in subsidies from the UK government meant for renewables. This money, taken from the public, has been used to fund the destruction of forests and health world-wide. By classifying biomass as renewable this allows them to take billions from the public whilst destroying the planet. The government must be honest about the harm caused by biofuels, to the planet and people around the world.
-
-It is time for governments and corporations to tell the truth about biomass.
+Governments and corporations be honest: biomass causes irreparable damage to the health of people and our life support systems. Classifying burning trees as renewable is a scam and the government is making us pay for it.
 
 ## Defund Biomass
 
-Remove the £billions in subsidies given Drax and other biomass power stations around the UK. This money is used to fund death and destruction around the world, harming people of colour and poorer communities the most whilst corporations profit. If we stop the money we stop the train of destruction.
+Remove the ££ billions in subsidies given to Drax and other biomass power stations in the UK. This money funds death and destruction around the world, harming POC and poorer communities the most whilst corporations profit. If we stop the money, we stop the destruction.
 
-## Fund Community Solutions
+## Fund Real Solutions
 
-The £billions given to biomass should be used to fund a just transition: furlough; retrain and transfer workers in the biomass industry; invest in education, affordable housing and health; fund genuine renewable energy; develop a plan of de-growth moving away from profit motives fuelling the climate crisis towards community based solutions. 
+The £ billions given to biomass should be used to fund a just transition: furlough; retrain and transfer workers in the biomass industry; invest in education, affordable housing and health; fund genuine renewable energy. We must develop a plan of moving away from profit motives, which are fuelling the climate crisis, towards community based solutions.
 
 ---
 
